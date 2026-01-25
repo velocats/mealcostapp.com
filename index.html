@@ -4,27 +4,63 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>MealCost – Track Grocery Prices & Meal Costs (iOS)</title>
-  <meta name="description" content="MealCost is a simple iOS app to track grocery prices, meal costs, and dining out totals over time. Add receipts, build meals from ingredients, and see what food really costs." />
-  <link rel="canonical" href="https://mealcost.neocities.org/" />
+  <!-- Primary SEO -->
+  <title>MealCost: Track Grocery Prices & Meal Costs (iOS App)</title>
+  <meta
+    name="description"
+    content="MealCost is a lightweight iOS meal cost tracker. Track grocery price history from receipts, build meals from ingredients, and see cost per meal and cost per person—based on what you actually paid."
+  />
+  <link rel="canonical" href="https://www.mealcostapp.com/" />
+  <meta name="robots" content="index,follow" />
 
-  <!-- Social -->
-  <meta property="og:title" content="MealCost – Track Grocery Prices & Meal Costs" />
-  <meta property="og:description" content="Add receipts, build meals, and see your real food costs over time." />
+  <!-- Favicons -->
+  <link rel="icon" href="MealCostAppIcon.png" />
+  <link rel="apple-touch-icon" href="MealCostAppIcon.png" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Social (Open Graph / Twitter) -->
+  <meta property="og:site_name" content="MealCost" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mealcost.neocities.org/" />
-  <meta property="og:image" content="https://mealcost.neocities.org/MealCostAppIcon.png" />
+  <meta property="og:title" content="MealCost: Track Grocery Prices & Meal Costs (iOS)" />
+  <meta
+    property="og:description"
+    content="Track grocery price trends from receipts, build meals from ingredients, and see cost per meal and cost per person—based on what you actually paid."
+  />
+  <meta property="og:url" content="https://www.mealcostapp.com/" />
+  <meta property="og:image" content="https://www.mealcostapp.com/MealCostAppIcon.png" />
+  <meta property="og:image:alt" content="MealCost app icon" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MealCost – Track Grocery Prices & Meal Costs" />
-  <meta name="twitter:description" content="Add receipts, build meals, and see your real food costs over time." />
-  <meta name="twitter:image" content="https://mealcost.neocities.org/MealCostAppIcon.png" />
-
-  <link rel="icon" href="MealCostAppIcon.png" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="twitter:title" content="MealCost: Track Grocery Prices & Meal Costs (iOS)" />
+  <meta
+    name="twitter:description"
+    content="Track grocery price trends, build meals, and see cost per meal and cost per person—based on what you actually paid."
+  />
+  <meta name="twitter:image" content="https://www.mealcostapp.com/MealCostAppIcon.png" />
 
   <!-- Optional: hints for crawlers (real config is robots.txt + sitemap.xml files) -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- App structured data (helps Google understand “this is an app”) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MealCost",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "iOS",
+    "description": "MealCost is a lightweight iOS meal cost tracker. Track grocery price history from receipts, build meals from ingredients, and see cost per meal and cost per person based on what you actually paid.",
+    "url": "https://www.mealcostapp.com/",
+    "downloadUrl": "https://apps.apple.com/us/app/mealcost-food-costs/id6757403777",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -34,7 +70,7 @@
         <img src="MealCostAppIcon.png" alt="MealCost app icon" class="logo" />
         <div class="brand-text">
           <span class="brand-name">MealCost</span>
-          <span class="brand-tagline">Track grocery prices & meal costs</span>
+          <span class="brand-tagline">Track grocery prices &amp; meal costs</span>
         </div>
       </a>
 
@@ -65,9 +101,9 @@
           <h1>Know what your meals really cost.</h1>
 
           <p class="lead">
-            MealCost is a lightweight iOS app that helps you track grocery prices and meal costs using your own data.
-            Add a receipt, build meals from ingredients, and log dining out with a single total. Over time, you’ll see
-            cost per meal, cost per person, and price trends that are actually based on what you paid.
+            MealCost is a lightweight iOS app that helps you track grocery prices and meal costs using your own receipt
+            data. Add a receipt, build meals from ingredients, or log dining out with a single total. Over time, you’ll
+            see cost per meal, cost per person, and grocery price trends that are based on what you actually paid.
           </p>
 
           <div class="hero-actions">
@@ -85,9 +121,9 @@
           </div>
 
           <ul class="hero-bullets">
-            <li>Track cost per meal and cost per person</li>
-            <li>Build meals from receipt items (or add a manual cost)</li>
-            <li>See grocery price trends over time</li>
+            <li>Meal cost tracker: cost per meal and cost per person</li>
+            <li>Grocery price tracker: simple price history from receipts</li>
+            <li>Dining out totals with optional tip tracking</li>
           </ul>
         </div>
 
@@ -95,7 +131,12 @@
           <div class="phone">
             <div class="phone-top"></div>
             <div class="phone-screen">
-              <img src="hero.png" alt="MealCost iOS screenshot showing meal cost summary" class="hero-screenshot" />
+              <img
+                src="hero.png"
+                alt="MealCost iOS screenshot showing a meal cost summary dashboard"
+                class="hero-screenshot"
+                loading="eager"
+              />
             </div>
             <div class="phone-bottom"></div>
           </div>
@@ -114,27 +155,27 @@
         <div class="cards">
           <article class="card">
             <h3>Track grocery prices</h3>
-            <p>Add receipt items and MealCost builds a simple price history over time.</p>
+            <p>Add receipt items and MealCost builds a simple grocery price history over time.</p>
           </article>
 
           <article class="card">
             <h3>Build meals from ingredients</h3>
-            <p>Combine ingredients into meals and estimate what each meal actually cost.</p>
+            <p>Combine ingredients into meals and calculate what each meal actually cost based on past purchases.</p>
           </article>
 
           <article class="card">
             <h3>Cost per person</h3>
-            <p>Set servings so you can compare home cooking to dining out.</p>
+            <p>Set servings so you can compare home cooking to dining out on an apples-to-apples basis.</p>
           </article>
 
           <article class="card">
             <h3>Dining out totals</h3>
-            <p>Log dining out with one total (and optionally track tip separately).</p>
+            <p>Log dining out with one total, and optionally track tip separately.</p>
           </article>
 
           <article class="card">
             <h3>Trends that make sense</h3>
-            <p>See how costs change month to month—without spreadsheets.</p>
+            <p>See how food costs change month to month—without spreadsheets.</p>
           </article>
 
           <article class="card">
@@ -161,7 +202,7 @@
 
           <article class="card">
             <h3>2) Create meals</h3>
-            <p>Pick ingredients, set servings, and MealCost calculates cost per meal and per person.</p>
+            <p>Pick ingredients, set servings, and MealCost calculates cost per meal and cost per person.</p>
           </article>
 
           <article class="card">
@@ -180,7 +221,7 @@
           <p>
             MealCost was built for a simple reason: food costs are hard to “feel” until you can see them.
             Instead of guessing, MealCost helps you capture what you actually spent, then turns it into
-            cost-per-meal and grocery price trends over time. It’s designed to be quick to use, easy to understand,
+            cost-per-meal numbers and grocery price trends over time. It’s designed to be quick to use, easy to understand,
             and useful even if you only track a few meals each week.
           </p>
         </div>
@@ -197,22 +238,22 @@
 
         <div class="gallery">
           <div class="shot">
-            <img src="1.png" alt="MealCost dashboard with meal cost trends" class="shot-img" />
+            <img src="1.png" alt="MealCost dashboard showing average meal cost trends" class="shot-img" loading="lazy" />
             <div class="shot-caption">Dashboard overview</div>
           </div>
 
           <div class="shot">
-            <img src="2.png" alt="MealCost budget charts showing monthly spending" class="shot-img" />
+            <img src="2.png" alt="MealCost budget charts showing monthly food spending" class="shot-img" loading="lazy" />
             <div class="shot-caption">Budget charts</div>
           </div>
 
           <div class="shot">
-            <img src="3.png" alt="MealCost charts for dining out and tips" class="shot-img" />
+            <img src="3.png" alt="MealCost dining out totals with optional tip tracking" class="shot-img" loading="lazy" />
             <div class="shot-caption">Dining out and tips</div>
           </div>
 
           <div class="shot">
-            <img src="4.png" alt="MealCost price change chart for grocery items" class="shot-img" />
+            <img src="4.png" alt="MealCost price change chart for grocery items over time" class="shot-img" loading="lazy" />
             <div class="shot-caption">Price change chart</div>
           </div>
         </div>
@@ -276,3 +317,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
