@@ -13,35 +13,20 @@
   <link rel="canonical" href="https://www.mealcostapp.com/" />
   <meta name="robots" content="index,follow" />
 
-  <!-- Favicons -->
+  <!-- Icons -->
   <link rel="icon" href="MealCostAppIcon.png" />
   <link rel="apple-touch-icon" href="MealCostAppIcon.png" />
-  <meta name="theme-color" content="#ffffff" />
 
-  <!-- Social (Open Graph / Twitter) -->
-  <meta property="og:site_name" content="MealCost" />
+  <!-- Social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="MealCost: Track Grocery Prices & Meal Costs (iOS)" />
-  <meta
-    property="og:description"
-    content="Track grocery price trends from receipts, build meals from ingredients, and see cost per meal and cost per person—based on what you actually paid."
-  />
+  <meta property="og:description" content="See cost per meal, cost per person, and grocery price trends using your own receipt data." />
   <meta property="og:url" content="https://www.mealcostapp.com/" />
   <meta property="og:image" content="https://www.mealcostapp.com/MealCostAppIcon.png" />
-  <meta property="og:image:alt" content="MealCost app icon" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MealCost: Track Grocery Prices & Meal Costs (iOS)" />
-  <meta
-    name="twitter:description"
-    content="Track grocery price trends, build meals, and see cost per meal and cost per person—based on what you actually paid."
-  />
-  <meta name="twitter:image" content="https://www.mealcostapp.com/MealCostAppIcon.png" />
 
-  <!-- Optional: hints for crawlers (real config is robots.txt + sitemap.xml files) -->
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-
-  <!-- App structured data (helps Google understand “this is an app”) -->
+  <!-- App schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -49,272 +34,251 @@
     "name": "MealCost",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "iOS",
-    "description": "MealCost is a lightweight iOS meal cost tracker. Track grocery price history from receipts, build meals from ingredients, and see cost per meal and cost per person based on what you actually paid.",
     "url": "https://www.mealcostapp.com/",
     "downloadUrl": "https://apps.apple.com/us/app/mealcost-food-costs/id6757403777",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Above-the-fold layout (self-contained) -->
+  <style>
+    :root {
+      --maxw: 1180px;
+      --pad: 18px;
+      --gap: 14px;
+      --radius: 18px;
+    }
+
+    body { margin: 0; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+
+    header {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    header .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+    }
+
+    .brand span {
+      font-weight: 700;
+    }
+
+    .cta {
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* HERO ABOVE THE FOLD */
+    .hero {
+      height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      opacity: 0.9;
+    }
+
+    .bullets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .bullets li {
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* VISUAL AREA */
+    .visual {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: var(--gap);
+    }
+
+    .hero-shot {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+
+    .hero-shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--gap);
+    }
+
+    .shot {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 9 / 19.5;
+    }
+
+    .shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* SMALLER SCREENS */
+    @media (max-width: 980px) {
+      .hero {
+        height: auto;
+        padding: 28px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .shots {
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        overflow-x: auto;
+        padding-bottom: 6px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="MealCost home">
-        <img src="MealCostAppIcon.png" alt="MealCost app icon" class="logo" />
-        <div class="brand-text">
-          <span class="brand-name">MealCost</span>
-          <span class="brand-tagline">Track grocery prices &amp; meal costs</span>
-        </div>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#">
+        <img src="MealCostAppIcon.png" alt="MealCost app icon" />
+        <span>MealCost</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#about">About</a>
-        <a href="#screens">Screens</a>
-
-        <a
-          href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-          target="_blank"
-          rel="noopener"
-          class="nav-cta"
-          aria-label="Download MealCost on the App Store"
-        >
-          Download
-        </a>
-      </nav>
+      <a
+        class="cta"
+        href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+        target="_blank"
+        rel="noopener"
+      >
+        Download
+      </a>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
+  <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
+      <div class="wrap hero-grid">
+        <!-- COPY -->
+        <div>
           <h1>Know what your meals really cost.</h1>
-
           <p class="lead">
-            MealCost is a lightweight iOS app that helps you track grocery prices and meal costs using your own receipt
-            data. Add a receipt, build meals from ingredients, or log dining out with a single total. Over time, you’ll
-            see cost per meal, cost per person, and grocery price trends that are based on what you actually paid.
+            MealCost turns your grocery receipts into clear numbers: cost per meal, cost per person,
+            and simple price trends. Log dining out with one total, or build meals from ingredients
+            you already buy.
           </p>
 
-          <div class="hero-actions">
+          <ul class="bullets">
+            <li>Cost per meal</li>
+            <li>Cost per person</li>
+            <li>Grocery price history</li>
+            <li>Dining out totals</li>
+          </ul>
+
+          <div class="actions">
             <a
-              class="button primary"
+              class="cta"
               href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
               target="_blank"
               rel="noopener"
-              aria-label="Download MealCost on the App Store"
             >
               Download on the App Store
             </a>
-
-            <a class="button ghost" href="#features">See features</a>
           </div>
-
-          <ul class="hero-bullets">
-            <li>Meal cost tracker: cost per meal and cost per person</li>
-            <li>Grocery price tracker: simple price history from receipts</li>
-            <li>Dining out totals with optional tip tracking</li>
-          </ul>
         </div>
 
-        <div class="hero-media">
-          <div class="phone">
-            <div class="phone-top"></div>
-            <div class="phone-screen">
-              <img
-                src="hero.png"
-                alt="MealCost iOS screenshot showing a meal cost summary dashboard"
-                class="hero-screenshot"
-                loading="eager"
-              />
+        <!-- VISUALS -->
+        <div class="visual">
+          <div class="hero-shot">
+            <img
+              src="hero.png"
+              alt="MealCost dashboard showing meal cost summaries"
+              loading="eager"
+            />
+          </div>
+
+          <div class="shots">
+            <div class="shot">
+              <img src="1.png" alt="MealCost dashboard trends" loading="eager" />
             </div>
-            <div class="phone-bottom"></div>
+            <div class="shot">
+              <img src="2.png" alt="MealCost budget charts" loading="eager" />
+            </div>
+            <div class="shot">
+              <img src="3.png" alt="MealCost dining out totals" loading="eager" />
+            </div>
+            <div class="shot">
+              <img src="4.png" alt="MealCost price history chart" loading="eager" />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section id="features" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>What you can do with MealCost</h2>
-          <p>Clear numbers for real life—groceries, cooking, leftovers, and eating out.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Track grocery prices</h3>
-            <p>Add receipt items and MealCost builds a simple grocery price history over time.</p>
-          </article>
-
-          <article class="card">
-            <h3>Build meals from ingredients</h3>
-            <p>Combine ingredients into meals and calculate what each meal actually cost based on past purchases.</p>
-          </article>
-
-          <article class="card">
-            <h3>Cost per person</h3>
-            <p>Set servings so you can compare home cooking to dining out on an apples-to-apples basis.</p>
-          </article>
-
-          <article class="card">
-            <h3>Dining out totals</h3>
-            <p>Log dining out with one total, and optionally track tip separately.</p>
-          </article>
-
-          <article class="card">
-            <h3>Trends that make sense</h3>
-            <p>See how food costs change month to month—without spreadsheets.</p>
-          </article>
-
-          <article class="card">
-            <h3>Private by design</h3>
-            <p>No weird tracking. MealCost is designed to stay lightweight and personal.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section id="how-it-works" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p>Start small. It gets better naturally as your history grows.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <h3>1) Add a receipt (or a total)</h3>
-            <p>Enter grocery receipt items, or log a dining out meal with just the final total.</p>
-          </article>
-
-          <article class="card">
-            <h3>2) Create meals</h3>
-            <p>Pick ingredients, set servings, and MealCost calculates cost per meal and cost per person.</p>
-          </article>
-
-          <article class="card">
-            <h3>3) Watch trends</h3>
-            <p>Use your charts to spot what’s rising, what’s stable, and what’s worth adjusting.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>About MealCost</h2>
-          <p>
-            MealCost was built for a simple reason: food costs are hard to “feel” until you can see them.
-            Instead of guessing, MealCost helps you capture what you actually spent, then turns it into
-            cost-per-meal numbers and grocery price trends over time. It’s designed to be quick to use, easy to understand,
-            and useful even if you only track a few meals each week.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCREENS -->
-    <section id="screens" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>App screens</h2>
-          <p>A quick look at what you’ll see inside MealCost.</p>
-        </div>
-
-        <div class="gallery">
-          <div class="shot">
-            <img src="1.png" alt="MealCost dashboard showing average meal cost trends" class="shot-img" loading="lazy" />
-            <div class="shot-caption">Dashboard overview</div>
-          </div>
-
-          <div class="shot">
-            <img src="2.png" alt="MealCost budget charts showing monthly food spending" class="shot-img" loading="lazy" />
-            <div class="shot-caption">Budget charts</div>
-          </div>
-
-          <div class="shot">
-            <img src="3.png" alt="MealCost dining out totals with optional tip tracking" class="shot-img" loading="lazy" />
-            <div class="shot-caption">Dining out and tips</div>
-          </div>
-
-          <div class="shot">
-            <img src="4.png" alt="MealCost price change chart for grocery items over time" class="shot-img" loading="lazy" />
-            <div class="shot-caption">Price change chart</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DOWNLOAD -->
-    <section id="download" class="section cta">
-      <div class="container cta-inner">
-        <div>
-          <h2>Get MealCost</h2>
-          <p>Start tracking your meal costs in minutes.</p>
-        </div>
-
-        <div class="cta-actions">
-          <a
-            class="button primary"
-            href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-            target="_blank"
-            rel="noopener"
-            aria-label="Download MealCost on the App Store"
-          >
-            Download on the App Store
-          </a>
-
-          <a class="button ghost" href="mailto:mealcostapp@gmail.com">Contact</a>
-        </div>
-
-        <p class="contact-line">
-          Email
-          <a href="mailto:mealcostapp@gmail.com" class="contact-email">
-            mealcostapp@gmail.com
-          </a>
-          for support, feature requests, and feedback.
-        </p>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img src="MealCostAppIcon.png" alt="" class="mini-logo" />
-        <span>© <span id="year"></span> MealCost</span>
-      </div>
-
-      <div class="footer-right">
-        <a
-          href="https://raw.githubusercontent.com/velocats/mealcost-privacy/main/README.md"
-          target="_blank"
-          rel="noopener"
-        >
-          Privacy
-        </a>
-
-        <a href="#top">Back to top</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
 
