@@ -171,8 +171,17 @@
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.35);
     }
-    .mc-hero-shot img{ width: 100%; height: auto; }
-
+    .mc-hero-shot{
+      height: clamp(280px, 42vh, 420px);
+    }
+    .mc-hero-shot img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mc-hero-shot img{
+      object-position: center top;
+    }
     .mc-shots{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
