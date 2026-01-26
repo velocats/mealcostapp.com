@@ -26,7 +26,6 @@
   <meta property="og:url" content="https://www.mealcostapp.com/" />
   <meta property="og:image" content="https://www.mealcostapp.com/MealCostAppIcon.png" />
   <meta property="og:image:alt" content="MealCost app icon" />
-
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- App schema -->
@@ -44,7 +43,7 @@
   }
   </script>
 
-  <!-- Keep your existing stylesheet -->
+  <!-- Your existing stylesheet (kept) -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Collision-proof layout + section styling (namespaced under .mc) -->
@@ -55,7 +54,13 @@
       --gap: 14px;
       --r: 18px;
       --shadow: 0 10px 30px rgba(0,0,0,.08);
+
+      /* bring back the colorful button feel */
+      --accent: #2dd4bf;
+      --accent2: #60a5fa;
+      --btnText: #071218;
     }
+
     .mc, .mc * { box-sizing: border-box; }
     .mc { margin: 0; }
     .mc a { color: inherit; }
@@ -90,7 +95,6 @@
       height: 34px;
       border-radius: 10px;
     }
-
     .mc-nav{
       display:flex;
       align-items:center;
@@ -104,6 +108,8 @@
       opacity: .9;
       white-space: nowrap;
     }
+
+    /* Buttons */
     .mc-btn{
       display:inline-flex;
       align-items:center;
@@ -112,13 +118,23 @@
       border-radius: 14px;
       text-decoration:none;
       font-weight: 800;
-      box-shadow: var(--shadow);
       white-space: nowrap;
+      border: 1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.65);
+      box-shadow: var(--shadow);
+      transition: transform 120ms ease, filter 120ms ease;
+    }
+    .mc-btn:hover{ transform: translateY(-1px); filter: brightness(1.03); }
+    .mc-btn.primary{
+      border: none;
+      color: var(--btnText);
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 10px 26px rgba(15,23,32,0.16);
     }
 
     /* Above-the-fold hero */
     .mc-hero{
-      padding: 22px 0 18px;
+      padding: 18px 0 18px;
       min-height: calc(100vh - 64px);
       display:flex;
       align-items:center;
@@ -126,8 +142,8 @@
     .mc-hero-grid{
       width: 100%;
       display:grid;
-      grid-template-columns: 1fr 1.25fr;
-      gap: 26px;
+      grid-template-columns: 1fr 1.15fr; /* slightly less aggressive right side */
+      gap: 24px;
       align-items:center;
     }
     .mc-h1{
@@ -140,7 +156,7 @@
       margin: 0 0 14px;
       font-size: 1.06rem;
       opacity: .88;
-      max-width: 48ch;
+      max-width: 50ch;
     }
     .mc-pills{
       list-style:none;
@@ -157,6 +173,8 @@
       opacity: .92;
       font-size: .95rem;
       white-space: nowrap;
+      background: rgba(255,255,255,.6);
+      border: 1px solid rgba(0,0,0,.06);
     }
 
     .mc-visual{
@@ -165,26 +183,27 @@
       gap: var(--gap);
       align-content:start;
     }
+
+    /* HERO IMAGE: make it feel like a "feature card", not a poster */
     .mc-hero-shot{
       border-radius: var(--r);
       overflow:hidden;
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.35);
-    }
-    .mc-hero-shot{
-      height: clamp(280px, 42vh, 420px);
+      height: clamp(210px, 30vh, 320px); /* smaller than before */
+      border: 1px solid rgba(0,0,0,.06);
     }
     .mc-hero-shot img{
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-    .mc-hero-shot img{
       object-position: center top;
     }
+
+    /* Screenshots: 2x2 grid on desktop (bigger + easier scan) */
     .mc-shots{
       display:grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: var(--gap);
     }
     .mc-shot{
@@ -192,6 +211,7 @@
       overflow:hidden;
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.35);
+      border: 1px solid rgba(0,0,0,.06);
       aspect-ratio: 9 / 19.5;
     }
     .mc-shot img{
@@ -202,7 +222,6 @@
 
     /* Sections */
     .mc-section{ padding: 56px 0; }
-    .mc-section.alt{ padding: 56px 0; }
     .mc-section-head h2{
       margin: 0 0 10px;
       letter-spacing: -0.01em;
@@ -225,6 +244,7 @@
       padding: 16px;
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.35);
+      border: 1px solid rgba(0,0,0,.06);
     }
     .mc-card h3{ margin: 0 0 8px; }
     .mc-card p{ margin: 0; opacity: .85; }
@@ -240,11 +260,7 @@
       overflow:hidden;
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.35);
-    }
-    .mc-gshot img{
-      width:100%;
-      height:auto;
-      display:block;
+      border: 1px solid rgba(0,0,0,.06);
     }
     .mc-gcap{
       padding: 10px 12px;
@@ -257,6 +273,7 @@
       border-radius: 22px;
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.35);
+      border: 1px solid rgba(0,0,0,.06);
       padding: 18px;
       margin-top: 18px;
       display:flex;
@@ -266,10 +283,7 @@
       flex-wrap: wrap;
     }
     .mc-download p{ margin: 0; opacity: .85; }
-    .mc-contact{
-      margin-top: 10px;
-      opacity: .85;
-    }
+    .mc-contact{ margin-top: 10px; opacity: .85; }
 
     /* Footer */
     .mc-footer{
@@ -295,27 +309,28 @@
     }
     .mc-footer a{ text-decoration:none; font-weight: 650; opacity: .9; }
 
-    /* Shorter screens: tighten so hero+shots stay visible */
+    /* Shorter screens: tighten */
     @media (max-height: 760px){
       .mc-header-inner{ height: 58px; }
-      .mc-hero{ min-height: calc(100vh - 58px); padding: 16px 0 12px; }
+      .mc-hero{ min-height: calc(100vh - 58px); padding: 14px 0 12px; }
       .mc-lead{ font-size: 1rem; margin-bottom: 12px; }
       .mc-pills{ margin-bottom: 12px; }
       .mc-pills li{ padding: 7px 10px; font-size: .92rem; }
+      .mc-hero-shot{ height: clamp(190px, 26vh, 280px); }
     }
 
     /* Responsive */
     @media (max-width: 980px){
       .mc-hero{ min-height: unset; }
       .mc-hero-grid{ grid-template-columns: 1fr; }
-      .mc-lead{ max-width: 60ch; }
 
-      /* keep screenshots accessible without vertical scroll */
+      /* phone/tablet: hero card then horizontal screenshot strip */
       .mc-shots{
         grid-template-columns: repeat(4, minmax(180px, 1fr));
         overflow-x: auto;
         padding-bottom: 6px;
       }
+      .mc-shot{ min-width: 180px; }
 
       .mc-cards{ grid-template-columns: 1fr; }
       .mc-gallery{ grid-template-columns: 1fr 1fr; }
@@ -341,7 +356,7 @@
         <a href="#how">How it works</a>
         <a href="#about">About</a>
         <a href="#screens">Screens</a>
-        <a href="#download" class="mc-btn">Download</a>
+        <a href="#download" class="mc-btn primary">Download</a>
       </nav>
     </div>
   </header>
@@ -366,7 +381,9 @@
             <li>Dining out totals</li>
           </ul>
 
-          <a class="mc-btn" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">
+          <a class="mc-btn primary"
+             href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+             target="_blank" rel="noopener">
             Download on the App Store
           </a>
 
@@ -433,7 +450,7 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how" class="mc-section alt">
+    <section id="how" class="mc-section">
       <div class="mc-wrap">
         <div class="mc-section-head">
           <h2>How it works</h2>
@@ -523,7 +540,9 @@
           </div>
 
           <div>
-            <a class="mc-btn" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">
+            <a class="mc-btn primary"
+               href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+               target="_blank" rel="noopener">
               Download on the App Store
             </a>
           </div>
