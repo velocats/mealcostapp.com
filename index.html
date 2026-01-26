@@ -16,47 +16,55 @@
   <!-- Icons -->
   <link rel="icon" href="MealCostAppIcon.png" />
   <link rel="apple-touch-icon" href="MealCostAppIcon.png" />
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- Social -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MealCost" />
   <meta property="og:title" content="MealCost: Track Grocery Prices & Meal Costs (iOS)" />
   <meta property="og:description" content="See cost per meal, cost per person, and grocery price trends using your own receipt data." />
   <meta property="og:url" content="https://www.mealcostapp.com/" />
   <meta property="og:image" content="https://www.mealcostapp.com/MealCostAppIcon.png" />
+  <meta property="og:image:alt" content="MealCost app icon" />
+
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- App schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "MealCost",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "iOS",
-    "url": "https://www.mealcostapp.com/",
-    "downloadUrl": "https://apps.apple.com/us/app/mealcost-food-costs/id6757403777",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"MealCost",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"iOS",
+    "description":"MealCost is a lightweight iOS meal cost tracker. Track grocery price history from receipts, build meals from ingredients, and see cost per meal and cost per person based on what you actually paid.",
+    "url":"https://www.mealcostapp.com/",
+    "downloadUrl":"https://apps.apple.com/us/app/mealcost-food-costs/id6757403777",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
   }
   </script>
 
-  <!-- Keep your existing stylesheet (fine) -->
+  <!-- Keep your existing stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Collision-proof layout -->
+  <!-- Collision-proof layout + section styling (namespaced under .mc) -->
   <style>
-    /* Namespace everything under .mc to avoid fighting style.css */
-    .mc { --maxw: 1180px; --pad: 20px; --gap: 14px; --r: 18px; --shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .mc{
+      --maxw: 1180px;
+      --pad: 20px;
+      --gap: 14px;
+      --r: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
     .mc, .mc * { box-sizing: border-box; }
     .mc { margin: 0; }
-    .mc body { margin: 0; }
-    /* Reset a few common elements inside our namespace */
     .mc a { color: inherit; }
-    .mc img { display:block; max-width: 100%; height: auto; }
+    .mc img { display:block; max-width:100%; height:auto; }
 
-    .mc-wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+    .mc-wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
 
     /* Header */
-    .mc-header {
+    .mc-header{
       position: sticky;
       top: 0;
       z-index: 50;
@@ -67,6 +75,7 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
+      gap: 14px;
     }
     .mc-brand{
       display:flex;
@@ -74,19 +83,27 @@
       gap: 10px;
       text-decoration:none;
       font-weight: 800;
+      white-space: nowrap;
     }
     .mc-brand img{
       width: 34px;
       height: 34px;
       border-radius: 10px;
     }
+
     .mc-nav{
       display:flex;
-      gap: 14px;
       align-items:center;
-      font-weight: 600;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
-    .mc-nav a{ text-decoration:none; opacity: .9; }
+    .mc-nav a{
+      text-decoration:none;
+      font-weight: 650;
+      opacity: .9;
+      white-space: nowrap;
+    }
     .mc-btn{
       display:inline-flex;
       align-items:center;
@@ -99,7 +116,7 @@
       white-space: nowrap;
     }
 
-    /* Hero */
+    /* Above-the-fold hero */
     .mc-hero{
       padding: 22px 0 18px;
       min-height: calc(100vh - 64px);
@@ -123,7 +140,7 @@
       margin: 0 0 14px;
       font-size: 1.06rem;
       opacity: .88;
-      max-width: 44ch;
+      max-width: 48ch;
     }
     .mc-pills{
       list-style:none;
@@ -142,7 +159,6 @@
       white-space: nowrap;
     }
 
-    /* Visual stack */
     .mc-visual{
       display:grid;
       grid-template-rows: auto auto;
@@ -155,12 +171,8 @@
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.35);
     }
-    .mc-hero-shot img{
-      width: 100%;
-      height: auto;
-    }
+    .mc-hero-shot img{ width: 100%; height: auto; }
 
-    /* Screenshot row */
     .mc-shots{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
@@ -171,7 +183,6 @@
       overflow:hidden;
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.35);
-      /* Keep them “phone-like” and consistent */
       aspect-ratio: 9 / 19.5;
     }
     .mc-shot img{
@@ -180,14 +191,108 @@
       object-fit: cover;
     }
 
-    /* Make it fit better on shorter laptop screens */
+    /* Sections */
+    .mc-section{ padding: 56px 0; }
+    .mc-section.alt{ padding: 56px 0; }
+    .mc-section-head h2{
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+    .mc-section-head p{
+      margin: 0;
+      opacity: .85;
+      max-width: 72ch;
+    }
+
+    .mc-cards{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .mc-card{
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,.35);
+    }
+    .mc-card h3{ margin: 0 0 8px; }
+    .mc-card p{ margin: 0; opacity: .85; }
+
+    .mc-gallery{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .mc-gshot{
+      border-radius: 18px;
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,.35);
+    }
+    .mc-gshot img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .mc-gcap{
+      padding: 10px 12px;
+      font-weight: 650;
+      opacity: .9;
+    }
+
+    /* Download CTA block */
+    .mc-download{
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,.35);
+      padding: 18px;
+      margin-top: 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .mc-download p{ margin: 0; opacity: .85; }
+    .mc-contact{
+      margin-top: 10px;
+      opacity: .85;
+    }
+
+    /* Footer */
+    .mc-footer{
+      padding: 28px 0 34px;
+      opacity: .85;
+    }
+    .mc-footer-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .mc-footer-left{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .mc-mini{
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+    }
+    .mc-footer a{ text-decoration:none; font-weight: 650; opacity: .9; }
+
+    /* Shorter screens: tighten so hero+shots stay visible */
     @media (max-height: 760px){
-      .mc-hero{ padding: 16px 0 12px; }
+      .mc-header-inner{ height: 58px; }
+      .mc-hero{ min-height: calc(100vh - 58px); padding: 16px 0 12px; }
       .mc-lead{ font-size: 1rem; margin-bottom: 12px; }
       .mc-pills{ margin-bottom: 12px; }
       .mc-pills li{ padding: 7px 10px; font-size: .92rem; }
-      .mc-header-inner{ height: 58px; }
-      .mc-hero{ min-height: calc(100vh - 58px); }
     }
 
     /* Responsive */
@@ -196,16 +301,20 @@
       .mc-hero-grid{ grid-template-columns: 1fr; }
       .mc-lead{ max-width: 60ch; }
 
-      /* Keep screenshots above-the-fold: horizontal strip on narrow screens */
+      /* keep screenshots accessible without vertical scroll */
       .mc-shots{
         grid-template-columns: repeat(4, minmax(180px, 1fr));
         overflow-x: auto;
         padding-bottom: 6px;
       }
+
+      .mc-cards{ grid-template-columns: 1fr; }
+      .mc-gallery{ grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 520px){
       .mc-nav a:not(.mc-btn){ display:none; }
+      .mc-gallery{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -213,23 +322,25 @@
 <body class="mc">
   <header class="mc-header">
     <div class="mc-wrap mc-header-inner">
-      <a class="mc-brand" href="#">
+      <a class="mc-brand" href="#top" aria-label="MealCost home">
         <img src="MealCostAppIcon.png" alt="MealCost app icon" />
         <span>MealCost</span>
       </a>
 
       <nav class="mc-nav" aria-label="Primary">
-        <a href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener" class="mc-btn">
-          Download
-        </a>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+        <a href="#screens">Screens</a>
+        <a href="#download" class="mc-btn">Download</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
+    <!-- ABOVE THE FOLD -->
     <section class="mc-hero">
       <div class="mc-wrap mc-hero-grid">
-        <!-- Copy -->
         <div>
           <h1 class="mc-h1">Know what your meals really cost.</h1>
 
@@ -249,12 +360,15 @@
           <a class="mc-btn" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">
             Download on the App Store
           </a>
+
+          <p style="margin-top:10px; opacity:.75;">
+            Private by design. No weird tracking.
+          </p>
         </div>
 
-        <!-- Visuals -->
-        <div class="mc-visual">
+        <div class="mc-visual" aria-label="MealCost visuals">
           <div class="mc-hero-shot">
-            <img src="hero.png" alt="MealCost dashboard showing meal cost summaries" loading="eager" />
+            <img src="hero.png" alt="MealCost hero screenshot" loading="eager" />
           </div>
 
           <div class="mc-shots" aria-label="MealCost screenshots">
@@ -266,7 +380,166 @@
         </div>
       </div>
     </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="mc-section">
+      <div class="mc-wrap">
+        <div class="mc-section-head">
+          <h2>What you can do with MealCost</h2>
+          <p>Clear numbers for real life—groceries, cooking, leftovers, and eating out.</p>
+        </div>
+
+        <div class="mc-cards">
+          <article class="mc-card">
+            <h3>Track grocery prices</h3>
+            <p>Add receipt items and MealCost builds a simple grocery price history over time.</p>
+          </article>
+
+          <article class="mc-card">
+            <h3>Build meals from ingredients</h3>
+            <p>Combine ingredients into meals and calculate what each meal actually cost based on past purchases.</p>
+          </article>
+
+          <article class="mc-card">
+            <h3>Cost per person</h3>
+            <p>Set servings so you can compare home cooking to dining out on an apples-to-apples basis.</p>
+          </article>
+
+          <article class="mc-card">
+            <h3>Dining out totals</h3>
+            <p>Log dining out with one total, and optionally track tip separately.</p>
+          </article>
+
+          <article class="mc-card">
+            <h3>Trends that make sense</h3>
+            <p>See how food costs change month to month—without spreadsheets.</p>
+          </article>
+
+          <article class="mc-card">
+            <h3>Private by design</h3>
+            <p>Designed to stay lightweight and personal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="mc-section alt">
+      <div class="mc-wrap">
+        <div class="mc-section-head">
+          <h2>How it works</h2>
+          <p>Start small. It gets better naturally as your history grows.</p>
+        </div>
+
+        <div class="mc-cards">
+          <article class="mc-card">
+            <h3>1) Add a receipt (or a total)</h3>
+            <p>Enter grocery receipt items, or log a dining out meal with just the final total.</p>
+          </article>
+
+          <article class="mc-card">
+            <h3>2) Create meals</h3>
+            <p>Pick ingredients, set servings, and MealCost calculates cost per meal and cost per person.</p>
+          </article>
+
+          <article class="mc-card">
+            <h3>3) Watch trends</h3>
+            <p>Use your charts to spot what’s rising, what’s stable, and what’s worth adjusting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mc-section">
+      <div class="mc-wrap">
+        <div class="mc-section-head">
+          <h2>About MealCost</h2>
+          <p>
+            MealCost was built for a simple reason: food costs are hard to “feel” until you can see them.
+            Instead of guessing, MealCost helps you capture what you actually spent, then turns it into
+            cost-per-meal numbers and grocery price trends over time. It’s designed to be quick to use,
+            easy to understand, and useful even if you only track a few meals each week.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENS -->
+    <section id="screens" class="mc-section">
+      <div class="mc-wrap">
+        <div class="mc-section-head">
+          <h2>App screens</h2>
+          <p>A quick look at what you’ll see inside MealCost.</p>
+        </div>
+
+        <div class="mc-gallery">
+          <div class="mc-gshot">
+            <img src="1.png" alt="MealCost dashboard showing average meal cost trends" loading="lazy" />
+            <div class="mc-gcap">Dashboard overview</div>
+          </div>
+
+          <div class="mc-gshot">
+            <img src="2.png" alt="MealCost budget charts showing monthly food spending" loading="lazy" />
+            <div class="mc-gcap">Budget charts</div>
+          </div>
+
+          <div class="mc-gshot">
+            <img src="3.png" alt="MealCost dining out totals with optional tip tracking" loading="lazy" />
+            <div class="mc-gcap">Dining out and tips</div>
+          </div>
+
+          <div class="mc-gshot">
+            <img src="4.png" alt="MealCost price change chart for grocery items over time" loading="lazy" />
+            <div class="mc-gcap">Price history</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download" class="mc-section">
+      <div class="mc-wrap">
+        <div class="mc-section-head">
+          <h2>Get MealCost</h2>
+          <p>Start tracking your meal costs in minutes.</p>
+        </div>
+
+        <div class="mc-download">
+          <div>
+            <p><strong>Download MealCost</strong> on the App Store.</p>
+            <p class="mc-contact">
+              Support / feedback: <a href="mailto:mealcostapp@gmail.com">mealcostapp@gmail.com</a>
+            </p>
+          </div>
+
+          <div>
+            <a class="mc-btn" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">
+              Download on the App Store
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mc-footer">
+      <div class="mc-wrap mc-footer-inner">
+        <div class="mc-footer-left">
+          <img src="MealCostAppIcon.png" alt="" class="mc-mini" />
+          <span>© <span id="mc-year"></span> MealCost</span>
+        </div>
+
+        <div class="mc-footer-right">
+          <a href="https://raw.githubusercontent.com/velocats/mealcost-privacy/main/README.md" target="_blank" rel="noopener">Privacy</a>
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById('mc-year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
   </main>
 </body>
 </html>
-
