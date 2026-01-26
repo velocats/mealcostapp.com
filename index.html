@@ -18,124 +18,179 @@
 <body>
 <header class="site-header">
   <div class="wrap header-inner">
-    <div class="brand">
+    <a class="brand" href="#top" aria-label="MealCost home">
       <img src="MealCostAppIcon.png" alt="MealCost icon" />
       <span>MealCost</span>
-    </div>
-    <nav>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
-      <a href="#screens">Screens</a>
-      <a class="btn primary"
-         href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-         target="_blank">Download</a>
+      <a href="#about">About</a>
+      <a href="#download" class="btn primary">Download</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="top">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <h1>Know what your meals really cost.</h1>
-      <p class="lead">
-        MealCost turns your grocery receipts into clear numbers:
-        cost per meal, cost per person, and simple price trends.
-      </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>Know what your meals really cost.</h1>
 
-      <ul class="pill-list">
-        <li>Cost per meal</li>
-        <li>Cost per person</li>
-        <li>Grocery price history</li>
-        <li>Dining out totals</li>
-      </ul>
+        <p class="lead">
+          MealCost turns your grocery receipts into clear numbers:
+          cost per meal, cost per person, and simple price trends.
+        </p>
+
+        <ul class="pill-list" aria-label="Key features">
+          <li>Cost per meal</li>
+          <li>Cost per person</li>
+          <li>Grocery price history</li>
+          <li>Dining out totals</li>
+        </ul>
+
+        <div class="hero-actions">
+          <a class="btn primary large"
+             href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+             target="_blank" rel="noopener">
+            Download on the App Store
+          </a>
+
+          <p class="subtle">Private by design. No weird tracking.</p>
+        </div>
+      </div>
+
+      <!-- Screenshot grid (shown on wider screens; collapses nicely on mobile) -->
+      <div class="screen-grid" aria-label="Screenshots">
+        <figure class="screen-card">
+          <img src="1.png" alt="Dashboard with trends" loading="eager" />
+          <figcaption>See your real cost per meal</figcaption>
+        </figure>
+
+        <figure class="screen-card">
+          <img src="2.png" alt="Monthly costs chart" loading="eager" />
+          <figcaption>Track monthly food spending</figcaption>
+        </figure>
+
+        <figure class="screen-card">
+          <img src="3.png" alt="Dining out summary" loading="eager" />
+          <figcaption>Log dining out with one total</figcaption>
+        </figure>
+
+        <figure class="screen-card">
+          <img src="4.png" alt="Grocery price changes over time" loading="eager" />
+          <figcaption>Watch grocery prices change</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Why MealCost</h2>
+        <p>Simple tracking that turns into useful insights over time.</p>
+      </header>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Built from receipts</h3>
+          <p>Prices reflect what you actually paid — not estimates.</p>
+        </article>
+
+        <article class="card">
+          <h3>Meals, not just groceries</h3>
+          <p>Combine ingredients into meals and calculate true cost.</p>
+        </article>
+
+        <article class="card">
+          <h3>Simple trends</h3>
+          <p>See what’s going up, down, or staying flat over time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS (BIGGER + CARD STYLE) -->
+  <section id="how" class="section alt">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>How it works</h2>
+        <p>Three quick steps. Start small — it gets better as your history grows.</p>
+      </header>
+
+      <div class="steps-grid" aria-label="How it works steps">
+        <article class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Add groceries or dining out</h3>
+            <p>Enter receipt items (or log a dining total). MealCost remembers what you paid.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Create meals</h3>
+            <p>Pick ingredients, set servings, and see cost per meal and cost per person.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Review trends</h3>
+            <p>Charts help you spot what’s changing and where your money is going.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT (RESTORED) -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>About MealCost</h2>
+        <p>A lightweight way to understand food costs without spreadsheets.</p>
+      </header>
+
+      <div class="about">
+        <p>
+          MealCost was built for a simple reason: food costs are hard to “feel” until you can see them.
+          Instead of guessing, you can capture what you actually spent, then turn it into clear numbers —
+          cost per meal, cost per person, and grocery price trends over time.
+        </p>
+        <p>
+          It’s designed to be quick to use, easy to understand, and helpful even if you only track a few
+          meals each week.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download" class="section">
+    <div class="wrap download-box">
+      <div class="download-copy">
+        <h2>Get MealCost</h2>
+        <p>Start understanding your food costs in minutes.</p>
+        <p class="contact">
+          Questions? <a href="mailto:mealcostapp@gmail.com">mealcostapp@gmail.com</a>
+        </p>
+      </div>
 
       <a class="btn primary large"
          href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-         target="_blank">
+         target="_blank" rel="noopener">
         Download on the App Store
       </a>
-
-      <p class="subtle">Private by design. No weird tracking.</p>
     </div>
-
-    <!-- SCREEN GRID -->
-    <div class="screen-grid">
-      <div class="screen-card">
-        <img src="1.png" alt="Dashboard overview" />
-        <span>See your real cost per meal</span>
-      </div>
-
-      <div class="screen-card">
-        <img src="2.png" alt="Monthly averages" />
-        <span>Track monthly food spending</span>
-      </div>
-
-      <div class="screen-card">
-        <img src="3.png" alt="Dining out totals" />
-        <span>Log dining out with one total</span>
-      </div>
-
-      <div class="screen-card">
-        <img src="4.png" alt="Grocery price history" />
-        <span>Watch grocery prices change</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section id="features" class="section">
-  <div class="wrap">
-    <h2>Why MealCost</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Built from receipts</h3>
-        <p>Prices reflect what you actually paid — not estimates.</p>
-      </div>
-      <div class="card">
-        <h3>Meals, not just groceries</h3>
-        <p>Combine ingredients into meals and calculate true cost.</p>
-      </div>
-      <div class="card">
-        <h3>Simple trends</h3>
-        <p>See what’s going up, down, or staying flat over time.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how" class="section alt">
-  <div class="wrap">
-    <h2>How it works</h2>
-    <ol class="steps">
-      <li>Add grocery receipts or dining totals</li>
-      <li>Create meals from ingredients</li>
-      <li>Review costs and trends over time</li>
-    </ol>
-  </div>
-</section>
-
-<!-- DOWNLOAD -->
-<section id="download" class="section">
-  <div class="wrap download-box">
-    <div>
-      <h2>Get MealCost</h2>
-      <p>Start understanding your food costs in minutes.</p>
-      <p class="contact">
-        Questions? <a href="mailto:mealcostapp@gmail.com">mealcostapp@gmail.com</a>
-      </p>
-    </div>
-    <a class="btn primary large"
-       href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-       target="_blank">
-      Download on the App Store
-    </a>
-  </div>
-</section>
+  </section>
 
 </main>
 
