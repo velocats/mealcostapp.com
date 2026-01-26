@@ -23,7 +23,6 @@
   <meta property="og:description" content="See cost per meal, cost per person, and grocery price trends using your own receipt data." />
   <meta property="og:url" content="https://www.mealcostapp.com/" />
   <meta property="og:image" content="https://www.mealcostapp.com/MealCostAppIcon.png" />
-
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- App schema -->
@@ -40,240 +39,229 @@
   }
   </script>
 
+  <!-- Keep your existing stylesheet (fine) -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Above-the-fold layout (self-contained) -->
+  <!-- Collision-proof layout -->
   <style>
-    :root {
-      --maxw: 1180px;
-      --pad: 18px;
-      --gap: 14px;
-      --radius: 18px;
-    }
+    /* Namespace everything under .mc to avoid fighting style.css */
+    .mc { --maxw: 1180px; --pad: 20px; --gap: 14px; --r: 18px; --shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .mc, .mc * { box-sizing: border-box; }
+    .mc { margin: 0; }
+    .mc body { margin: 0; }
+    /* Reset a few common elements inside our namespace */
+    .mc a { color: inherit; }
+    .mc img { display:block; max-width: 100%; height: auto; }
 
-    body { margin: 0; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+    .mc-wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
 
-    header {
-      height: 64px;
-      display: flex;
-      align-items: center;
+    /* Header */
+    .mc-header {
       position: sticky;
       top: 0;
+      z-index: 50;
       backdrop-filter: blur(10px);
-      z-index: 10;
     }
-
-    header .wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .mc-header-inner{
+      height: 64px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
     }
-
-    .brand {
-      display: flex;
+    .mc-brand{
+      display:flex;
+      align-items:center;
       gap: 10px;
-      align-items: center;
-      text-decoration: none;
+      text-decoration:none;
+      font-weight: 800;
     }
-
-    .brand img {
+    .mc-brand img{
       width: 34px;
       height: 34px;
-      border-radius: 8px;
+      border-radius: 10px;
     }
-
-    .brand span {
-      font-weight: 700;
+    .mc-nav{
+      display:flex;
+      gap: 14px;
+      align-items:center;
+      font-weight: 600;
     }
-
-    .cta {
+    .mc-nav a{ text-decoration:none; opacity: .9; }
+    .mc-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       padding: 10px 14px;
       border-radius: 14px;
-      font-weight: 700;
-      text-decoration: none;
+      text-decoration:none;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+      white-space: nowrap;
     }
 
-    /* HERO ABOVE THE FOLD */
-    .hero {
-      height: calc(100vh - 64px);
-      display: flex;
-      align-items: center;
+    /* Hero */
+    .mc-hero{
+      padding: 22px 0 18px;
+      min-height: calc(100vh - 64px);
+      display:flex;
+      align-items:center;
     }
-
-    .hero-grid {
-      display: grid;
+    .mc-hero-grid{
+      width: 100%;
+      display:grid;
       grid-template-columns: 1fr 1.25fr;
-      gap: 22px;
-      align-items: center;
+      gap: 26px;
+      align-items:center;
     }
-
-    h1 {
+    .mc-h1{
       margin: 0 0 10px;
-      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      font-size: clamp(2rem, 3vw, 2.8rem);
       letter-spacing: -0.02em;
+      line-height: 1.05;
     }
-
-    .lead {
+    .mc-lead{
       margin: 0 0 14px;
-      font-size: 1.05rem;
-      opacity: 0.9;
+      font-size: 1.06rem;
+      opacity: .88;
+      max-width: 44ch;
     }
-
-    .bullets {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      list-style: none;
+    .mc-pills{
+      list-style:none;
       padding: 0;
       margin: 0 0 16px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-
-    .bullets li {
+    .mc-pills li{
       padding: 8px 12px;
       border-radius: 999px;
-      font-size: 0.95rem;
-      opacity: 0.85;
+      box-shadow: var(--shadow);
+      opacity: .92;
+      font-size: .95rem;
+      white-space: nowrap;
     }
 
-    .actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    /* VISUAL AREA */
-    .visual {
-      display: grid;
-      grid-template-rows: auto 1fr;
+    /* Visual stack */
+    .mc-visual{
+      display:grid;
+      grid-template-rows: auto auto;
       gap: var(--gap);
+      align-content:start;
     }
-
-    .hero-shot {
-      border-radius: var(--radius);
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
+    .mc-hero-shot{
+      border-radius: var(--r);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,.35);
     }
-
-    .hero-shot img {
+    .mc-hero-shot img{
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+      height: auto;
     }
 
-    .shots {
-      display: grid;
+    /* Screenshot row */
+    .mc-shots{
+      display:grid;
       grid-template-columns: repeat(4, 1fr);
       gap: var(--gap);
     }
-
-    .shot {
-      border-radius: var(--radius);
-      overflow: hidden;
+    .mc-shot{
+      border-radius: var(--r);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,.35);
+      /* Keep them “phone-like” and consistent */
       aspect-ratio: 9 / 19.5;
     }
-
-    .shot img {
+    .mc-shot img{
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
 
-    /* SMALLER SCREENS */
-    @media (max-width: 980px) {
-      .hero {
-        height: auto;
-        padding: 28px 0;
-      }
+    /* Make it fit better on shorter laptop screens */
+    @media (max-height: 760px){
+      .mc-hero{ padding: 16px 0 12px; }
+      .mc-lead{ font-size: 1rem; margin-bottom: 12px; }
+      .mc-pills{ margin-bottom: 12px; }
+      .mc-pills li{ padding: 7px 10px; font-size: .92rem; }
+      .mc-header-inner{ height: 58px; }
+      .mc-hero{ min-height: calc(100vh - 58px); }
+    }
 
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
+    /* Responsive */
+    @media (max-width: 980px){
+      .mc-hero{ min-height: unset; }
+      .mc-hero-grid{ grid-template-columns: 1fr; }
+      .mc-lead{ max-width: 60ch; }
 
-      .shots {
+      /* Keep screenshots above-the-fold: horizontal strip on narrow screens */
+      .mc-shots{
         grid-template-columns: repeat(4, minmax(180px, 1fr));
         overflow-x: auto;
         padding-bottom: 6px;
       }
     }
+
+    @media (max-width: 520px){
+      .mc-nav a:not(.mc-btn){ display:none; }
+    }
   </style>
 </head>
 
-<body>
-  <header>
-    <div class="wrap">
-      <a class="brand" href="#">
+<body class="mc">
+  <header class="mc-header">
+    <div class="mc-wrap mc-header-inner">
+      <a class="mc-brand" href="#">
         <img src="MealCostAppIcon.png" alt="MealCost app icon" />
         <span>MealCost</span>
       </a>
 
-      <a
-        class="cta"
-        href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-        target="_blank"
-        rel="noopener"
-      >
-        Download
-      </a>
+      <nav class="mc-nav" aria-label="Primary">
+        <a href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener" class="mc-btn">
+          Download
+        </a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <!-- COPY -->
+    <section class="mc-hero">
+      <div class="mc-wrap mc-hero-grid">
+        <!-- Copy -->
         <div>
-          <h1>Know what your meals really cost.</h1>
-          <p class="lead">
+          <h1 class="mc-h1">Know what your meals really cost.</h1>
+
+          <p class="mc-lead">
             MealCost turns your grocery receipts into clear numbers: cost per meal, cost per person,
             and simple price trends. Log dining out with one total, or build meals from ingredients
             you already buy.
           </p>
 
-          <ul class="bullets">
+          <ul class="mc-pills">
             <li>Cost per meal</li>
             <li>Cost per person</li>
             <li>Grocery price history</li>
             <li>Dining out totals</li>
           </ul>
 
-          <div class="actions">
-            <a
-              class="cta"
-              href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-              target="_blank"
-              rel="noopener"
-            >
-              Download on the App Store
-            </a>
-          </div>
+          <a class="mc-btn" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">
+            Download on the App Store
+          </a>
         </div>
 
-        <!-- VISUALS -->
-        <div class="visual">
-          <div class="hero-shot">
-            <img
-              src="hero.png"
-              alt="MealCost dashboard showing meal cost summaries"
-              loading="eager"
-            />
+        <!-- Visuals -->
+        <div class="mc-visual">
+          <div class="mc-hero-shot">
+            <img src="hero.png" alt="MealCost dashboard showing meal cost summaries" loading="eager" />
           </div>
 
-          <div class="shots">
-            <div class="shot">
-              <img src="1.png" alt="MealCost dashboard trends" loading="eager" />
-            </div>
-            <div class="shot">
-              <img src="2.png" alt="MealCost budget charts" loading="eager" />
-            </div>
-            <div class="shot">
-              <img src="3.png" alt="MealCost dining out totals" loading="eager" />
-            </div>
-            <div class="shot">
-              <img src="4.png" alt="MealCost price history chart" loading="eager" />
-            </div>
+          <div class="mc-shots" aria-label="MealCost screenshots">
+            <div class="mc-shot"><img src="1.png" alt="MealCost dashboard trends" loading="eager" /></div>
+            <div class="mc-shot"><img src="2.png" alt="MealCost budget charts" loading="eager" /></div>
+            <div class="mc-shot"><img src="3.png" alt="MealCost dining out totals" loading="eager" /></div>
+            <div class="mc-shot"><img src="4.png" alt="MealCost price history chart" loading="eager" /></div>
           </div>
         </div>
       </div>
