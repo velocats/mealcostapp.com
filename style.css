@@ -341,10 +341,14 @@ img { max-width: 100%; display: block; }
   filter: brightness(1.05);
 }
 .screen-label {
-  background: rgba(255,255,255,0.6);
-  padding: 6px 12px;
-  border-radius: 999px;
-  display: inline-block;
-  margin: 0 auto 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 12px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 8px 14px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
