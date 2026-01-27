@@ -340,3 +340,10 @@ img { max-width: 100%; display: block; }
   transform: translateY(-1px);
   filter: brightness(1.05);
 }
+.screen-card figcaption {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: var(--text);
+  text-align: center;
+}
