@@ -5,7 +5,7 @@
   <title>MealCost – Know What Your Meals Really Cost</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="MealCost turns grocery receipts into clear numbers: cost per meal, cost per person, and grocery price trends. Built for iOS." />
+        content="MealCost turns grocery receipts into clear numbers: cost per meal, cost per person, and simple price trends. Built for iOS." />
   <link rel="canonical" href="https://www.mealcostapp.com/" />
   <meta name="robots" content="index,follow" />
 
@@ -13,6 +13,14 @@
   <link rel="apple-touch-icon" href="MealCostAppIcon.png" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Small helper styles for the App Store badge layout (safe even if you already have styles) -->
+  <style>
+    .store-badges { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:14px; }
+    .store-badge img { height: 44px; width:auto; display:block; }
+    .store-badge { display:inline-flex; align-items:center; }
+    .cta-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:14px; }
+  </style>
 </head>
 
 <body>
@@ -23,12 +31,14 @@
       <span>MealCost</span>
     </a>
 
+    <!-- Tightened nav: fewer links + clearer CTA -->
     <nav class="nav" aria-label="Primary">
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
-      <a href="#about">About</a>
       <a href="support.html">Support</a>
-      <a href="#download" class="btn primary">Download</a>
+
+      <!-- Smart CTA: iOS -> App Store, desktop -> scroll to Download -->
+      <a id="headerCta" href="#download" class="btn primary">Get the iOS App</a>
     </nav>
   </div>
 </header>
@@ -55,11 +65,21 @@
         </ul>
 
         <div class="hero-actions">
-          <a class="btn primary large"
-             href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-             target="_blank" rel="noopener">
-            Download on the App Store
-          </a>
+          <div class="cta-row">
+            <!-- Smart CTA: iOS -> App Store, desktop -> scroll to Download -->
+            <a id="heroCta" class="btn primary large" href="#download">Get the iOS App</a>
+
+            <!-- Official App Store badge -->
+            <a class="store-badge"
+               href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+               target="_blank" rel="noopener"
+               aria-label="Download MealCost on the App Store">
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store"
+                loading="eager" />
+            </a>
+          </div>
 
           <p class="subtle">
             Track your meal costs for free with 30 days of rolling history.
@@ -191,7 +211,20 @@
       <div class="download-copy">
         <h2>Get MealCost</h2>
         <p>Start understanding your food costs in minutes.</p>
-        <p class="contact">
+
+        <div class="store-badges" aria-label="Download badges">
+          <a class="store-badge"
+             href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+             target="_blank" rel="noopener"
+             aria-label="Download MealCost on the App Store">
+            <img
+              src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+              alt="Download on the App Store"
+              loading="lazy" />
+          </a>
+        </div>
+
+        <p class="contact" style="margin-top:14px;">
           Questions or feature requests? Email:
           <a href="mailto:mealcostapp@gmail.com">mealcostapp@gmail.com</a>
         </p>
@@ -200,11 +233,8 @@
         </p>
       </div>
 
-      <a class="btn primary large"
-         href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-         target="_blank" rel="noopener">
-        Download on the App Store
-      </a>
+      <!-- Keep a big CTA button too (smart behavior via JS) -->
+      <a id="downloadCta" class="btn primary large" href="#download">Get the iOS App</a>
     </div>
   </section>
 
@@ -222,8 +252,59 @@
 </footer>
 
 <script>
+  // Year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Smart behavior:
+  // - On iPhone/iPad (iOS/iPadOS): CTA buttons go directly to the App Store (new tab)
+  // - On desktop: CTA buttons smoothly scroll to the Download section
+  (function () {
+    var APP_STORE_URL = "https://apps.apple.com/us/app/mealcost-food-costs/id6757403777";
+
+    function isIOSLike() {
+      // Covers iPhone/iPad/iPod + iPadOS masquerading as Mac
+      var ua = navigator.userAgent || "";
+      var platform = navigator.platform || "";
+      var maxTouch = navigator.maxTouchPoints || 0;
+
+      var iOSUA = /iPad|iPhone|iPod/.test(ua);
+      var iPadOS13Plus = (platform === "MacIntel" && maxTouch > 1);
+      return iOSUA || iPadOS13Plus;
+    }
+
+    function setupCTA(el) {
+      if (!el) return;
+
+      if (isIOSLike()) {
+        el.setAttribute("href", APP_STORE_URL);
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener");
+        el.textContent = "Download on the App Store";
+      } else {
+        // Desktop: scroll to download section
+        el.setAttribute("href", "#download");
+        el.removeAttribute("target");
+        el.removeAttribute("rel");
+        el.textContent = "Get the iOS App";
+
+        el.addEventListener("click", function (e) {
+          // Smooth scroll
+          var target = document.getElementById("download");
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            // Optional: move focus for accessibility
+            target.setAttribute("tabindex", "-1");
+            target.focus({ preventScroll: true });
+          }
+        });
+      }
+    }
+
+    setupCTA(document.getElementById("headerCta"));
+    setupCTA(document.getElementById("heroCta"));
+    setupCTA(document.getElementById("downloadCta"));
+  })();
 </script>
 </body>
 </html>
-
