@@ -1,346 +1,262 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>MealCost – Know What Your Meals Really Cost</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="MealCost turns grocery receipts into clear numbers: cost per meal, cost per person, and simple price trends. Built for iOS." />
-  <link rel="canonical" href="https://www.mealcostapp.com/" />
-  <meta name="robots" content="index,follow" />
-
-  <link rel="icon" href="MealCostAppIcon.png" />
-  <link rel="apple-touch-icon" href="MealCostAppIcon.png" />
-
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- App Store badge layout helpers -->
-  <style>
+<meta charset="utf-8"/>
+<title>MealCost – Know What Your Meals Really Cost</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="MealCost turns grocery receipts into clear numbers: cost per meal, cost per person, and simple price trends. Built for iOS." name="description"/>
+<link href="https://www.mealcostapp.com/" rel="canonical"/>
+<meta content="index,follow" name="robots"/>
+<link href="MealCostAppIcon.png" rel="icon"/>
+<link href="MealCostAppIcon.png" rel="apple-touch-icon"/>
+<link href="style.css" rel="stylesheet"/>
+<!-- App Store badge layout helpers -->
+<style>
     .store-badges { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:14px; }
     .store-badge { display:inline-flex; align-items:center; }
     .store-badge img { height: 44px; width:auto; display:block; }
     .cta-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:14px; }
 </style>
 </head>
-
 <body>
 <header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="#top" aria-label="MealCost home">
-      <img src="MealCostAppIcon.png" alt="MealCost icon" />
-      <span>MealCost</span>
-    </a>
-
-    <!-- Tightened nav: fewer links + clearer CTA -->
-    <nav class="nav" aria-label="Primary">
-      <a href="#features">Features</a>
-      <a href="#how">How it works</a>
-      <a href="support.html">Support</a>
-
-      <!-- Always goes to App Store -->
-      <a id="headerCta"
-         href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-         class="btn primary"
-         target="_blank" rel="noopener">
+<div class="wrap header-inner">
+<a aria-label="MealCost home" class="brand" href="#top">
+<img alt="MealCost icon" src="MealCostAppIcon.png"/>
+<span>MealCost</span>
+</a>
+<!-- Tightened nav: fewer links + clearer CTA -->
+<nav aria-label="Primary" class="nav">
+<a href="#features">Features</a>
+<a href="#how">How it works</a>
+<a href="support.html">Support</a>
+<!-- Always goes to App Store -->
+<a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" id="headerCta" rel="noopener" target="_blank">
         Get the iOS App
       </a>
-    </nav>
-  </div>
+</nav>
+</div>
 </header>
-
 <main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <h1>Know what your meals really cost.</h1>
-
-        <p class="lead">
+<!-- HERO -->
+<section class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>Know what your meals really cost.</h1>
+<p class="lead">
           MealCost turns your grocery receipts into clear numbers:
           cost per meal, cost per person, and simple price trends.
         </p>
-
-        <ul class="pill-list" aria-label="Key features">
-          <li>Cost per meal</li>
-          <li>Cost per person</li>
-          <li>Grocery price history</li>
-          <li>Dining out totals</li>
-          <li>30 days of meal history — free</li>
-        </ul>
-
-        <div class="hero-actions">
-          <div class="cta-row">
-            <!-- Always goes to App Store -->
-            <a id="heroCta"
-               class="btn primary large"
-               href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-               target="_blank" rel="noopener">
+<ul aria-label="Key features" class="pill-list">
+<li>Cost per meal</li>
+<li>Cost per person</li>
+<li>Grocery price history</li>
+<li>Dining out totals</li>
+<li>30 days of meal history — free</li>
+</ul>
+<div class="hero-actions">
+<div class="cta-row">
+<!-- Always goes to App Store -->
+<a class="btn primary large" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" id="heroCta" rel="noopener" target="_blank">
               Get the iOS App
             </a>
-
-            <!-- Official App Store badge -->
-            <a class="store-badge"
-               href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-               target="_blank" rel="noopener"
-               aria-label="Download MealCost on the App Store">
-              <img
-                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
-                alt="Download on the App Store"
-                loading="eager" />
-            </a>
-          </div>
-
-          <p class="subtle">
+<!-- Official App Store badge -->
+<a aria-label="Download MealCost on the App Store" class="store-badge" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" rel="noopener" target="_blank">
+<img alt="Download on the App Store" loading="eager" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"/>
+</a>
+</div>
+<p class="subtle">
             Track your meal costs for free with 30 days of rolling history.
           </p>
-
-          <p class="subtle">
+<p class="subtle">
             Private by design. Your data stays on your device (and your iCloud, if enabled).
           </p>
-        </div>
-      </div>
+</div>
+</div>
+<!-- Screenshot grid -->
 
-      <!-- Screenshot grid -->
-      <div class="screen-grid" aria-label="Screenshots">
-        <figure class="screen-card">
-          <div class="screen-label">See your real cost per meal</div>
-          <img src="1.png" alt="Dashboard with trends" loading="eager" />
-        </figure>
-
-        <figure class="screen-card">
-          <div class="screen-label">Track monthly food spending</div>
-          <img src="2.png" alt="Monthly costs chart" loading="eager" />
-        </figure>
-
-        <figure class="screen-card">
-          <div class="screen-label">Understand tipping history</div>
-          <img src="3.png" alt="Dining out summary" loading="eager" />
-        </figure>
-
-        <figure class="screen-card">
-          <div class="screen-label">Watch grocery prices change</div>
-          <img src="4.png" alt="Grocery price changes over time" loading="eager" />
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEO DEMOS -->
-  <section id="videos" class="section">
-    <div class="wrap">
-      <header class="section-head">
-        <h2>Watch it in action</h2>
-        <p>Quick walkthroughs showing the core flow in MealCost.</p>
-      </header>
-
-      <div class="video-grid" aria-label="MealCost demo videos">
-
-        <!-- AddReceipt.mp4 — Adding receipts to MealCost -->
-        <figure class="video-card">
-          <figcaption>Add receipts</figcaption>
-          <p>Enter a receipt so your prices reflect what you really paid.</p>
-          <div class="video-media">
-            <video controls playsinline preload="metadata">
-            <source src="AddReceipt.mp4" type="video/mp4" />
+<div aria-label="Screenshots and demo videos" class="media-split"><div class="media-left"><header class="media-head"><h3>Watch it in action</h3><p>Quick walkthroughs showing the core flow in MealCost.</p></header><div aria-label="MealCost demo videos" class="video-grid">
+<!-- AddReceipt.mp4 — Adding receipts to MealCost -->
+<figure class="video-card">
+<figcaption>Add receipts</figcaption>
+<p>Enter a receipt so your prices reflect what you really paid.</p>
+<div class="video-media">
+<video controls="" playsinline="" preload="metadata">
+<source src="AddReceipt.mp4" type="video/mp4"/>
             Sorry, your browser doesn’t support embedded videos.
           </video>
-          </div>
-        </figure>
-
-        <!-- CreateaMeal.mp4 — Creating a meal -->
-        <figure class="video-card">
-          <figcaption>Create a meal</figcaption>
-          <p>Select ingredients, set servings, and instantly see cost per meal and cost per person.</p>
-          <div class="video-media">
-            <video controls playsinline preload="metadata">
-            <source src="CreateaMeal.mp4" type="video/mp4" />
+</div>
+</figure>
+<!-- CreateaMeal.mp4 — Creating a meal -->
+<figure class="video-card">
+<figcaption>Create a meal</figcaption>
+<p>Select ingredients, set servings, and instantly see cost per meal and cost per person.</p>
+<div class="video-media">
+<video controls="" playsinline="" preload="metadata">
+<source src="CreateaMeal.mp4" type="video/mp4"/>
             Sorry, your browser doesn’t support embedded videos.
           </video>
-          </div>
-        </figure>
-
-        <!-- DineOutMeal.mp4 — Logging dining out -->
-        <figure class="video-card">
-          <figcaption>Log dining out</figcaption>
-          <p>Add a dining-out total (and tip) so your food spending includes real nights out.</p>
-          <div class="video-media">
-            <video controls playsinline preload="metadata">
-            <source src="DineOutMeal.mp4" type="video/mp4" />
+</div>
+</figure>
+<!-- DineOutMeal.mp4 — Logging dining out -->
+<figure class="video-card">
+<figcaption>Log dining out</figcaption>
+<p>Add a dining-out total (and tip) so your food spending includes real nights out.</p>
+<div class="video-media">
+<video controls="" playsinline="" preload="metadata">
+<source src="DineOutMeal.mp4" type="video/mp4"/>
             Sorry, your browser doesn’t support embedded videos.
           </video>
-          </div>
-        </figure>
-
-        <!-- GraphsAndInsights.mp4 — Exploring graphs and insights -->
-        <figure class="video-card wide">
-          <figcaption>Graphs and insights</figcaption>
-          <p>See trends improve as you add more receipts, meals, and dining-out entries.</p>
-
-          <div class="video-media">
-            <div class="video-wrap">
-            <video
-              controls
-              playsinline
-              preload="none"
-              poster="inside-insights.png"
-            >
-              <source src="GraphsAndInsights.mp4" type="video/mp4" />
+</div>
+</figure>
+<!-- GraphsAndInsights.mp4 — Exploring graphs and insights -->
+<figure class="video-card wide">
+<figcaption>Graphs and insights</figcaption>
+<p>See trends improve as you add more receipts, meals, and dining-out entries.</p>
+<div class="video-media">
+<video controls="" playsinline="" poster="inside-insights.png" preload="none">
+<source src="GraphsAndInsights.mp4" type="video/mp4"/>
               Sorry, your browser doesn’t support embedded videos.
             </video>
+<p class="video-hint">Watch deeper insights (2 min)</p>
+</div></figure>
+</div></div><div class="media-right"><div aria-label="Screenshots" class="screen-grid">
+<figure class="screen-card">
+<div class="screen-label">See your real cost per meal</div>
+<img alt="Dashboard with trends" loading="eager" src="1.png"/>
+</figure>
+<figure class="screen-card">
+<div class="screen-label">Track monthly food spending</div>
+<img alt="Monthly costs chart" loading="eager" src="2.png"/>
+</figure>
+<figure class="screen-card">
+<div class="screen-label">Understand tipping history</div>
+<img alt="Dining out summary" loading="eager" src="3.png"/>
+</figure>
+<figure class="screen-card">
+<div class="screen-label">Watch grocery prices change</div>
+<img alt="Grocery price changes over time" loading="eager" src="4.png"/>
+</figure>
+</div></div></div></div>
+</section>
+<!-- VIDEO DEMOS -->
 
-            <div class="play-overlay" aria-hidden="true">
-              <span></span>
-            </div>
-          </div>
-
-          <p class="video-hint">Watch deeper insights (2 min)</p>
-        </figure>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section id="features" class="section">
-    <div class="wrap">
-      <header class="section-head">
-        <h2>Why MealCost</h2>
-        <p>Simple tracking that turns into useful insights over time.</p>
-      </header>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Built from receipts</h3>
-          <p>Prices reflect what you actually paid — not estimates.</p>
-        </article>
-
-        <article class="card">
-          <h3>Meals, not just groceries</h3>
-          <p>Combine ingredients into meals and calculate true cost.</p>
-        </article>
-
-        <article class="card">
-          <h3>Simple trends</h3>
-          <p>See what’s going up, down, or staying flat over time.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section id="how" class="section alt">
-    <div class="wrap">
-      <header class="section-head">
-        <h2>How it works</h2>
-        <p>Three quick steps. Start small — it gets better as your history grows.</p>
-      </header>
-
-      <div class="steps-grid" aria-label="How it works steps">
-        <article class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <h3>Add groceries or dining out</h3>
-            <p>Enter receipt items (or log a dining out total). MealCost remembers what you paid.</p>
-          </div>
-        </article>
-
-        <article class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <h3>Create meals</h3>
-            <p>Pick ingredients, set servings, and see cost per meal and cost per person.</p>
-          </div>
-        </article>
-
-        <article class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <h3>Review trends</h3>
-            <p>Charts help you spot what’s changing and where your money is going.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="wrap">
-      <header class="section-head">
-        <h2>About MealCost</h2>
-        <p>A lightweight way to understand food costs without spreadsheets.</p>
-      </header>
-
-      <div class="about">
-        <p>
+<!-- FEATURES -->
+<section class="section" id="features">
+<div class="wrap">
+<header class="section-head">
+<h2>Why MealCost</h2>
+<p>Simple tracking that turns into useful insights over time.</p>
+</header>
+<div class="cards">
+<article class="card">
+<h3>Built from receipts</h3>
+<p>Prices reflect what you actually paid — not estimates.</p>
+</article>
+<article class="card">
+<h3>Meals, not just groceries</h3>
+<p>Combine ingredients into meals and calculate true cost.</p>
+</article>
+<article class="card">
+<h3>Simple trends</h3>
+<p>See what’s going up, down, or staying flat over time.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="section alt" id="how">
+<div class="wrap">
+<header class="section-head">
+<h2>How it works</h2>
+<p>Three quick steps. Start small — it gets better as your history grows.</p>
+</header>
+<div aria-label="How it works steps" class="steps-grid">
+<article class="step">
+<div class="step-num">1</div>
+<div class="step-body">
+<h3>Add groceries or dining out</h3>
+<p>Enter receipt items (or log a dining out total). MealCost remembers what you paid.</p>
+</div>
+</article>
+<article class="step">
+<div class="step-num">2</div>
+<div class="step-body">
+<h3>Create meals</h3>
+<p>Pick ingredients, set servings, and see cost per meal and cost per person.</p>
+</div>
+</article>
+<article class="step">
+<div class="step-num">3</div>
+<div class="step-body">
+<h3>Review trends</h3>
+<p>Charts help you spot what’s changing and where your money is going.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+<section class="section" id="about">
+<div class="wrap">
+<header class="section-head">
+<h2>About MealCost</h2>
+<p>A lightweight way to understand food costs without spreadsheets.</p>
+</header>
+<div class="about">
+<p>
           MealCost was created to answer a simple question that most food apps ignore:
           <strong>what does a meal actually cost?</strong>
-        </p>
-        <p>
+</p>
+<p>
           Grocery totals don’t tell the whole story. Ingredients get reused, leftovers stretch across days,
           and dining out gets mixed in with home cooking. MealCost helps you capture what you really spend,
           then turns it into cost per meal, cost per person, and easy-to-read trends.
         </p>
-        <p>
+<p>
           It’s designed to stay lightweight — no budgeting systems, no social feeds, and no pressure to log
           everything perfectly. Even a little data goes a long way once you can see it clearly.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DOWNLOAD -->
-  <section id="download" class="section">
-    <div class="wrap download-box">
-      <div class="download-copy">
-        <h2>Get MealCost</h2>
-        <p>Start understanding your food costs in minutes.</p>
-
-        <div class="store-badges" aria-label="Download badges">
-          <a class="store-badge"
-             href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-             target="_blank" rel="noopener"
-             aria-label="Download MealCost on the App Store">
-            <img
-              src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
-              alt="Download on the App Store"
-              loading="lazy" />
-          </a>
-        </div>
-
-        <p class="contact" style="margin-top:14px;">
+</div>
+</div>
+</section>
+<!-- DOWNLOAD -->
+<section class="section" id="download">
+<div class="wrap download-box">
+<div class="download-copy">
+<h2>Get MealCost</h2>
+<p>Start understanding your food costs in minutes.</p>
+<div aria-label="Download badges" class="store-badges">
+<a aria-label="Download MealCost on the App Store" class="store-badge" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" rel="noopener" target="_blank">
+<img alt="Download on the App Store" loading="lazy" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"/>
+</a>
+</div>
+<p class="contact" style="margin-top:14px;">
           Questions or feature requests? Email:
           <a href="mailto:mealcostapp@gmail.com">mealcostapp@gmail.com</a>
-        </p>
-        <p class="subtle" style="margin-top:10px;">
+</p>
+<p class="subtle" style="margin-top:10px;">
           Need help? Visit the <a href="support.html" style="font-weight:800; text-decoration:none;">Support page</a>.
         </p>
-      </div>
-
-      <!-- Always goes to App Store -->
-      <a id="downloadCta"
-         class="btn primary large"
-         href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-         target="_blank" rel="noopener">
+</div>
+<!-- Always goes to App Store -->
+<a class="btn primary large" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" id="downloadCta" rel="noopener" target="_blank">
         Get the iOS App
       </a>
-    </div>
-  </section>
-
+</div>
+</section>
 </main>
-
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span>© <span id="year"></span> MealCost</span>
-    <div style="display:flex; gap:14px; flex-wrap:wrap;">
-      <a href="support.html">Support</a>
-      <a href="support.html#privacy">Privacy</a>
-      <a href="#top">Back to top</a>
-    </div>
-  </div>
+<div class="wrap footer-inner">
+<span>© <span id="year"></span> MealCost</span>
+<div style="display:flex; gap:14px; flex-wrap:wrap;">
+<a href="support.html">Support</a>
+<a href="support.html#privacy">Privacy</a>
+<a href="#top">Back to top</a>
+</div>
+</div>
 </footer>
-
 <script>
   // Year
   document.getElementById("year").textContent = new Date().getFullYear();
