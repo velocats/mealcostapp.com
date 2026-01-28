@@ -20,7 +20,7 @@
     .store-badge { display:inline-flex; align-items:center; }
     .store-badge img { height: 44px; width:auto; display:block; }
     .cta-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:14px; }
-  </style>
+</style>
 </head>
 
 <body>
@@ -122,6 +122,74 @@
           <div class="screen-label">Watch grocery prices change</div>
           <img src="4.png" alt="Grocery price changes over time" loading="eager" />
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO DEMOS -->
+  <section id="videos" class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Watch it in action</h2>
+        <p>Quick walkthroughs showing the core flow in MealCost.</p>
+      </header>
+
+      <div class="video-grid" aria-label="MealCost demo videos">
+
+        <!-- AddReceipt.mp4 — Adding receipts to MealCost -->
+        <figure class="video-card">
+          <figcaption>Add receipts</figcaption>
+          <p>Scan or enter a receipt so your prices reflect what you really paid.</p>
+          <video controls playsinline preload="metadata">
+            <source src="AddReceipt.mp4" type="video/mp4" />
+            Sorry, your browser doesn’t support embedded videos.
+          </video>
+        </figure>
+
+        <!-- CreateaMeal.mp4 — Creating a meal -->
+        <figure class="video-card">
+          <figcaption>Create a meal</figcaption>
+          <p>Select ingredients, set servings, and instantly see cost per meal and cost per person.</p>
+          <video controls playsinline preload="metadata">
+            <source src="CreateaMeal.mp4" type="video/mp4" />
+            Sorry, your browser doesn’t support embedded videos.
+          </video>
+        </figure>
+
+        <!-- DineOutMeal.mp4 — Logging dining out -->
+        <figure class="video-card">
+          <figcaption>Log dining out</figcaption>
+          <p>Add a dining-out total (and tip) so your food spending includes real nights out.</p>
+          <video controls playsinline preload="metadata">
+            <source src="DineOutMeal.mp4" type="video/mp4" />
+            Sorry, your browser doesn’t support embedded videos.
+          </video>
+        </figure>
+
+        <!-- GraphsAndInsights.mp4 — Exploring graphs and insights -->
+        <figure class="video-card wide">
+          <figcaption>Graphs and insights</figcaption>
+          <p>See trends improve as you add more receipts, meals, and dining-out entries.</p>
+
+          <div class="video-wrap">
+            <video
+              controls
+              playsinline
+              preload="none"
+              poster="inside-insights.png"
+            >
+              <source src="GraphsAndInsights.mp4" type="video/mp4" />
+              Sorry, your browser doesn’t support embedded videos.
+            </video>
+
+            <div class="play-overlay" aria-hidden="true">
+              <span></span>
+            </div>
+          </div>
+
+          <p class="video-hint">Watch deeper insights (2 min)</p>
+        </figure>
+
       </div>
     </div>
   </section>
