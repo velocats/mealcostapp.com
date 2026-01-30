@@ -23,13 +23,14 @@
       <span>MealCost</span>
     </a>
 
+    <!-- Tightened nav: fewer links + clearer CTA -->
     <nav class="nav" aria-label="Primary">
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
       <a href="#videos">Watch it in action</a>
-      <a href="#learn">Learn</a>
       <a href="support.html">Support</a>
 
+      <!-- Always goes to App Store -->
       <a id="headerCta"
          href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
          class="btn primary"
@@ -49,7 +50,7 @@
         <h1>Know what your meals really cost.</h1>
 
         <p class="lead">
-          MealCost turns your receipts into clear numbers:
+          MealCost turns your grocery receipts into clear numbers:
           cost per meal, cost per person, and simple price trends.
         </p>
 
@@ -63,6 +64,7 @@
 
         <div class="hero-actions">
           <div class="cta-row">
+            <!-- Always goes to App Store -->
             <a id="heroCta"
                class="btn primary large"
                href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
@@ -70,6 +72,7 @@
               Get the iOS App
             </a>
 
+            <!-- Official App Store badge -->
             <a class="store-badge"
                href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
                target="_blank" rel="noopener"
@@ -87,10 +90,6 @@
 
           <p class="subtle">
             Private by design. Your data stays on your device (and your iCloud, if enabled).
-          </p>
-
-          <p class="subtle">
-            Want the “why” behind the numbers? Start with <a href="#learn" style="font-weight:800; text-decoration:none;">a few quick reads</a>.
           </p>
         </div>
       </div>
@@ -130,6 +129,7 @@
 
       <div class="demo-grid" aria-label="MealCost demo videos">
 
+        <!-- AddReceipt.mp4 -->
         <figure class="demo-card">
           <figcaption>Add receipts</figcaption>
           <div class="demo-media">
@@ -141,6 +141,7 @@
           <p class="demo-desc">Enter a receipt so your prices reflect what you really paid.</p>
         </figure>
 
+        <!-- CreateaMeal.mp4 -->
         <figure class="demo-card">
           <figcaption>Create a meal</figcaption>
           <div class="demo-media">
@@ -152,6 +153,7 @@
           <p class="demo-desc">Select ingredients, set servings, and see cost per meal and per person.</p>
         </figure>
 
+        <!-- DineOutMeal.mp4 -->
         <figure class="demo-card">
           <figcaption>Log dining out</figcaption>
           <div class="demo-media">
@@ -163,6 +165,7 @@
           <p class="demo-desc">Add a dining-out total (and tip) to track real nights out.</p>
         </figure>
 
+        <!-- GraphsAndInsights.mp4 -->
         <figure class="demo-card">
           <figcaption>Graphs and insights <span class="demo-pill">2 min</span></figcaption>
           <div class="demo-media">
@@ -177,7 +180,6 @@
       </div>
     </div>
   </section>
-
   <!-- FEATURES -->
   <section id="features" class="section">
     <div class="wrap">
@@ -241,60 +243,8 @@
     </div>
   </section>
 
-  <!-- LEARN (evergreen content, not a "blog") -->
-  <section id="learn" class="section">
-    <div class="wrap">
-      <header class="section-head">
-        <h2>Learn</h2>
-        <p>Short reads that answer the questions people actually ask.</p>
-      </header>
-
-      <div class="cards">
-        <article class="card">
-          <h3><a href="learn/home-cooked-meal-cost.html">What does a home-cooked meal actually cost?</a></h3>
-          <p>Why “$180 at the grocery store” doesn’t translate to a real dinner number.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="learn/cost-per-meal-vs-serving.html">Cost per meal vs cost per serving</a></h3>
-          <p>The simple difference that makes recipe math less annoying (and more honest).</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="learn/monthly-grocery-spending.html">How much should I spend on groceries each month?</a></h3>
-          <p>Ranges, reality checks, and why trends matter more than “the perfect budget.”</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="learn/eating-out-vs-cooking.html">Eating out vs cooking at home: real numbers</a></h3>
-          <p>Not guilt. Just clarity. It’s the frequency that sneaks up on you.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="learn/why-groceries-are-more-expensive.html">Why your grocery bill keeps going up</a></h3>
-          <p>Shrinkflation, swaps, and the “same cart, higher total” problem.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="learn/track-food-spending.html">How to track food spending without obsessing</a></h3>
-          <p>A practical approach if spreadsheets make you want to close the tab.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="learn/normal-cost-per-dinner.html">What’s a “normal” cost per dinner?</a></h3>
-          <p>A better question: what’s normal for <em>you</em>—and is it moving?</p>
-        </article>
-      </div>
-
-      <p class="subtle" style="margin-top:14px;">
-        These are meant to be useful even if you never download the app.
-        If you do, they’ll make the numbers click faster.
-      </p>
-    </div>
-  </section>
-
   <!-- ABOUT -->
-  <section id="about" class="section alt">
+  <section id="about" class="section">
     <div class="wrap">
       <header class="section-head">
         <h2>About MealCost</h2>
@@ -314,11 +264,6 @@
         <p>
           It’s designed to stay lightweight — no budgeting systems, no social feeds, and no pressure to log
           everything perfectly. Even a little data goes a long way once you can see it clearly.
-        </p>
-        <p>
-          If you’re curious, start here:
-          <a href="learn/cost-per-meal-vs-serving.html" style="font-weight:800; text-decoration:none;">cost per meal vs cost per serving</a>.
-          It explains why this app exists in the first place.
         </p>
       </div>
     </div>
@@ -352,6 +297,7 @@
         </p>
       </div>
 
+      <!-- Always goes to App Store -->
       <a id="downloadCta"
          class="btn primary large"
          href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
@@ -367,7 +313,6 @@
   <div class="wrap footer-inner">
     <span>© <span id="year"></span> MealCost</span>
     <div style="display:flex; gap:14px; flex-wrap:wrap;">
-      <a href="#learn">Learn</a>
       <a href="support.html">Support</a>
       <a href="support.html#privacy">Privacy</a>
       <a href="#top">Back to top</a>
