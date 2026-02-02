@@ -5,7 +5,7 @@
   <title>MealCost – Know What Your Meals Really Cost</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="MealCost turns grocery receipts into clear numbers: cost per meal, cost per person, tip totals, and simple price trends. Built for iOS." />
+        content="MealCost turns grocery receipts into clear numbers: cost per meal, cost per person, and simple price trends. Built for iOS." />
   <link rel="canonical" href="https://www.mealcostapp.com/" />
   <meta name="robots" content="index,follow" />
 
@@ -26,7 +26,6 @@
     <nav class="nav" aria-label="Primary">
       <a href="#features">Why MealCost</a>
       <a href="#how">How it works</a>
-      <a href="#pricing">Free vs Unlock</a>
       <a href="#videos">Watch it in action</a>
       <a href="#learn">Learn</a>
       <a href="support.html">Support</a>
@@ -51,15 +50,15 @@
 
         <p class="lead">
           MealCost turns your receipts into clear numbers:
-          cost per meal, cost per person, tip totals, and simple price trends.
+          cost per meal, cost per person, and simple price trends.
         </p>
 
         <ul class="pill-list" aria-label="Key features">
           <li>Cost per meal</li>
           <li>Cost per person</li>
-          <li>Item price history</li>
-          <li>Dining out totals & tips</li>
-          <li>30 days of history — free</li>
+          <li>Grocery price history</li>
+          <li>Dining out totals</li>
+          <li>30 days of meal history — free</li>
         </ul>
 
         <div class="hero-actions">
@@ -83,8 +82,7 @@
           </div>
 
           <p class="subtle">
-            Free includes a rolling 30 days of meal and receipt history.
-            Unlock once to keep everything and see deeper trends.
+            Track your meal costs for free with 30 days of rolling history.
           </p>
 
           <p class="subtle">
@@ -118,71 +116,6 @@
           <div class="screen-label">Watch grocery prices change</div>
           <img src="4.png" alt="Grocery price changes over time" loading="eager" />
         </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- FREE VS UNLOCK (PROMINENT) -->
-  <section id="pricing" class="section alt">
-    <div class="wrap">
-      <header class="section-head">
-        <h2>Free vs Unlock</h2>
-        <p>Exactly what you get for free — and what the $2.99 one-time unlock adds.</p>
-      </header>
-
-      <div class="cards" aria-label="Free vs Unlock feature lists">
-
-        <article class="card">
-          <h3>Free tier</h3>
-          <p class="subtle" style="margin-top:-6px;">Start tracking immediately. No account required.</p>
-
-          <ul style="margin:14px 0 0; padding-left:18px; line-height:1.6;">
-            <li>Track meals and items</li>
-            <li>Add meals manually or from receipts</li>
-            <li>View recent totals and summaries</li>
-            <li>Milestones as you log meals</li>
-            <li>Meal history stored locally on your device</li>
-            <li><strong>View the last 30 days of meals and receipts</strong></li>
-          </ul>
-
-          <p class="subtle" style="margin-top:14px;">
-            Free shows a rolling last 30 days. Older entries remain on your device, but they won’t appear in lists and time-based charts until you unlock.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Unlock (one-time $2.99)</h3>
-          <p class="subtle" style="margin-top:-6px;"><strong>No subscription.</strong> Restore anytime.</p>
-
-          <ul style="margin:14px 0 0; padding-left:18px; line-height:1.6;">
-            <li><strong>Unlimited history</strong> (no 30‑day limit)</li>
-            <li><strong>Insights and trends over time</strong></li>
-            <li><strong>Budgets and monthly targets</strong></li>
-            <li><strong>Tip totals and tip history over time</strong></li>
-            <li><strong>Item price history and cost trends</strong></li>
-            <li><strong>Advanced stats and summaries</strong></li>
-          </ul>
-
-          <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
-            <a class="btn primary"
-               href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
-               target="_blank" rel="noopener">
-              Get MealCost
-            </a>
-            <span class="subtle">Unlock is available inside the app.</span>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="cards" style="margin-top:18px;">
-        <article class="card">
-          <h3>What happens at day 31?</h3>
-          <p>
-            Nothing breaks — you can keep entering meals and receipts. In the free tier, MealCost only <strong>shows</strong> the most recent 30 days in
-            history views. Unlock removes the limit so you can keep everything visible and see longer-term trends.
-          </p>
-        </article>
       </div>
     </div>
   </section>
@@ -265,7 +198,7 @@
         </article>
 
         <article class="card">
-          <h3>Trends that make sense</h3>
+          <h3>Simple trends</h3>
           <p>See what’s going up, down, or staying flat over time.</p>
         </article>
       </div>
@@ -301,14 +234,14 @@
           <div class="step-num">3</div>
           <div class="step-body">
             <h3>Review trends</h3>
-            <p>Charts help you spot what’s changing and where your money is going. Unlocking adds long-term insights and budgets.</p>
+            <p>Charts help you spot what’s changing and where your money is going.</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- LEARN -->
+  <!-- LEARN (evergreen content, not a "blog") -->
   <section id="learn" class="section">
     <div class="wrap">
       <header class="section-head">
@@ -346,7 +279,7 @@
           <h3><a href="learn/track-food-spending.html">How to track food spending without obsessing</a></h3>
           <p>A practical approach if spreadsheets make you want to close the tab.</p>
         </article>
-      </div>
+</div>
 
       <p class="subtle" style="margin-top:14px;"><a href="learn/index.html" style="font-weight:800; text-decoration:none;">See all articles →</a></p>
 
@@ -431,7 +364,6 @@
   <div class="wrap footer-inner">
     <span>© <span id="year"></span> MealCost</span>
     <div style="display:flex; gap:14px; flex-wrap:wrap;">
-      <a href="#pricing">Free vs Unlock</a>
       <a href="#learn">Learn</a>
       <a href="support.html">Support</a>
       <a href="support.html#privacy">Privacy</a>
