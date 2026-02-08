@@ -50,4 +50,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://mealcost.neocities.org/sitemap.xml
+Sitemap: https://www.mealcostapp.com/sitemap.xml

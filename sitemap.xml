@@ -2,61 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mealcostapp.com/</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mealcostapp.com/support.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mealcostapp.com/learn/</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.mealcostapp.com/learn.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mealcostapp.com/learn/home-cooked-meal-cost.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.mealcostapp.com/track-cost-of-meals.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mealcostapp.com/learn/cost-per-meal-vs-serving.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.mealcostapp.com/home-cooked-meal-cost.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mealcostapp.com/learn/monthly-grocery-spending.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.mealcostapp.com/cost-per-meal-vs-serving.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mealcostapp.com/learn/eating-out-vs-cooking.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.mealcostapp.com/monthly-grocery-spending.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mealcostapp.com/learn/why-groceries-are-more-expensive.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.mealcostapp.com/eating-out-vs-cooking.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mealcostapp.com/learn/track-food-spending.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.mealcostapp.com/why-groceries-are-more-expensive.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mealcostapp.com/learn/normal-cost-per-dinner.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.mealcostapp.com/track-food-spending.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mealcostapp.com/normal-cost-per-dinner.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mealcostapp.com/release-notes.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
