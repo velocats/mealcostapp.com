@@ -25,8 +25,10 @@
     <nav class="nav" aria-label="Primary">
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
+      <a href="#unlock">Free vs Unlock</a>
       <a href="#videos">Watch it in action</a>
       <a href="learn.html">Learn</a>
+      <a href="release-notes.html">Release Notes</a>
       <a href="support.html">Support</a>
 
       <a id="headerCta"
@@ -245,43 +247,106 @@
 
 
   <!-- FREE VS UNLOCK -->
-  <section class="section alt" id="unlock">
+  <section id="unlock" class="section alt">
     <div class="wrap">
       <header class="section-head">
         <h2>Free vs Unlock</h2>
-        <p>
-          MealCost is fully usable for free. Unlock adds longer history and deeper insights —
-          nothing required to try it out.
-        </p>
+        <p>Exactly what you get for free — and what the $2.99 one-time unlock adds.</p>
       </header>
 
-      <div class="cards" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+      <div class="cards" aria-label="Free vs Unlock feature lists">
+
         <article class="card">
-          <h3>Free</h3>
-          <ul style="margin: 0; padding-left: 18px; line-height: 1.7; color: var(--muted);">
-            <li>Add grocery receipts</li>
-            <li>Create meals from real prices</li>
-            <li>See cost per meal and cost per person</li>
-            <li>Track recent spending and trends</li>
-            <li>30 days of history</li>
+          <h3>Free tier</h3>
+          <p class="subtle" style="margin-top:-6px;">Start tracking immediately. No account required.</p>
+
+          <ul style="margin:14px 0 0; padding-left:18px; line-height:1.6;">
+            <li>Track meals, receipts, and dining out</li>
+            <li>Create meals from ingredients and see cost per meal and cost per person</li>
+            <li><strong>Dashboard charts</strong>: Recent Cost Per Meal + Grocery Spend (Day/Week/Month/Year)</li>
+            <li><strong>Budget charts</strong>: Average Meal Cost + Dining Out Spending (Day/Week/Month/Year)</li>
+            <li><strong>View the last 30 days</strong> of meals and receipts (rolling history)</li>
           </ul>
+
+          <p class="subtle" style="margin-top:14px;">
+            Free includes a rolling last 30 days of meals and receipts in history views and time-based charts. Unlock removes the limit so trends can span months and years.</p>
         </article>
 
         <article class="card">
-          <h3>Unlock</h3>
-          <ul style="margin: 0; padding-left: 18px; line-height: 1.7; color: var(--muted);">
-            <li>Unlimited history</li>
-            <li>Monthly and long-term trends</li>
-            <li>See how costs change over time</li>
-            <li>Better context for “is this normal?”</li>
-            <li>One-time purchase</li>
+          <h3>Unlock (one-time $2.99)</h3>
+          <p class="subtle" style="margin-top:-6px;"><strong>No subscription.</strong> Restore anytime.</p>
+
+          <ul style="margin:14px 0 0; padding-left:18px; line-height:1.6;">
+            <li><strong>Unlimited history</strong> (no 30‑day limit)</li>
+            <li><strong>Insights over time</strong> (month and year trends that keep improving as you log)</li>
+            <li><strong>Item price history</strong> so you can spot rising prices and track inflation</li>
+            <li><strong>Deeper dining out analysis</strong> including tip totals and trends</li>
+            <li><strong>More detailed summaries</strong> across your full history</li>
           </ul>
+
+          <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+            <a class="btn primary"
+               href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+               target="_blank" rel="noopener">
+              Get MealCost
+            </a>
+            <span class="subtle">Unlock is available inside the app.</span>
+          </div>
         </article>
+
       </div>
 
-      <p class="subtle" style="margin-top: 14px;">
-        You can use MealCost for free as long as you want. Unlock is there if the long-term view is useful.
-      </p>
+      
+      <div class="compare-wrap" aria-label="Free vs Unlock comparison table" style="margin-top:22px;">
+        <h3 style="margin:0 0 10px;">At-a-glance</h3>
+        <div class="table-scroll" style="overflow:auto; border-radius:16px; border:1px solid rgba(15,23,32,0.10); background:#fff;">
+          <table class="compare" style="width:100%; border-collapse:collapse; min-width:680px;">
+            <thead>
+              <tr>
+                <th style="text-align:left; padding:14px 14px; border-bottom:1px solid rgba(15,23,32,0.10);">Feature</th>
+                <th style="text-align:center; padding:14px 14px; border-bottom:1px solid rgba(15,23,32,0.10); width:160px;">Free</th>
+                <th style="text-align:center; padding:14px 14px; border-bottom:1px solid rgba(15,23,32,0.10); width:200px;">Unlock (Insights • $2.99 one-time)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">Create meals + calculate cost per meal / per person</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">✓</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">✓</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">Dashboard charts (Recent Cost Per Meal, Grocery Spend)</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">✓</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">✓</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">Budget charts (Avg Meal Cost vs Target, Dining Out vs Target)</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">✓</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">✓</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">History visible in lists & time-based charts</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);"><strong>Last 30 days</strong></td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);"><strong>Unlimited</strong></td>
+              </tr>
+              <tr>
+                <td style="padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">Insights (long-term trends that span months/years)</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">—</td>
+                <td style="text-align:center; padding:12px 14px; border-bottom:1px solid rgba(15,23,32,0.08);">✓</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 14px;">Item price history (what’s changing over time)</td>
+                <td style="text-align:center; padding:12px 14px;">—</td>
+                <td style="text-align:center; padding:12px 14px;">✓</td>
+              </tr>
+</tbody>
+          </table>
+        </div>
+        <p class="subtle" style="margin-top:10px;">
+          Unlock is a one-time purchase (not a subscription) and can be restored on your devices.
+        </p>
+      </div>
+
     </div>
   </section>
 
