@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MealCost Release Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MealCost release notes and what’s new in each version." />
+  <link rel="canonical" href="https://www.mealcostapp.com/release-notes.html" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="icon" href="MealCostAppIcon.png" />
+  <link rel="apple-touch-icon" href="MealCostAppIcon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html#top" aria-label="MealCost home">
+      <img src="MealCostAppIcon.png" alt="MealCost icon" />
+      <span>MealCost</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#features">Why MealCost</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#pricing">Free vs Unlock</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="release-notes.html" aria-current="page">Release Notes</a>
+      <a href="support.html">Support</a>
+      <a href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+         class="btn primary"
+         target="_blank" rel="noopener">
+        Get the iOS App
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <section class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h1>Release Notes</h1>
+        <p>What’s new in MealCost. Short, scannable updates you can check before (or after) an upgrade.</p>
+      </header>
+
+      <div class="rn-index">
+        <a class="rn-jump" href="#v106">v1.0.6</a>
+      </div>
+
+      <article id="v106" class="rn-entry">
+        <div class="rn-meta">
+          <h2 class="rn-version">v1.0.6</h2>
+          <div class="rn-date">February 2026</div>
+        </div>
+
+        <p class="rn-summary">
+          Cleaner flows, clearer charts, and better sample data so the dashboards and insights look great right away.
+        </p>
+
+        <div class="rn-grid">
+          <section class="rn-block">
+            <h3>Dashboard</h3>
+            <ul>
+              <li><strong>New shareable stat:</strong> “Dining out costs X× more on average” callout.</li>
+              <li>Improved chart math consistency so “Home vs Dining Out” matches dashboard totals.</li>
+              <li>Timeframes now behave consistently across free vs paid (free uses a rolling 30 days; paid can use multiple ranges).</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Insights</h3>
+            <ul>
+              <li>Filter controls tightened up to avoid big, interrupting selection screens.</li>
+              <li>Home vs Eating Out calculations corrected so dining-out meals reliably appear.</li>
+              <li>Timeframe labels standardized back to the simple Day / Week / Month / Year style.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Meals</h3>
+            <ul>
+              <li>Streamlined “Make a Meal” flow with less UI jumping and fewer taps to get to “Add Items”.</li>
+              <li>Tighter ingredient list layout so more items fit on screen at once.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Receipts</h3>
+            <ul>
+              <li>Streamlined receipt add/edit flow to reduce friction when adding grocery items.</li>
+              <li>Sample receipts and items updated so lists and charts populate immediately.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block rn-wide">
+            <h3>Sample data + chart quality</h3>
+            <ul>
+              <li>Sample history expanded to span multiple years so Year charts look meaningful.</li>
+              <li>More variation between home-cooked vs dining out sample data to make trends visible.</li>
+              <li>General fixes for empty charts, missing series, and outlier spikes.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="rn-footer">
+          <a class="btn" href="support.html">Questions? Visit Support</a>
+          <a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">Get the iOS App</a>
+        </div>
+      </article>
+
+      <!-- Template for future versions:
+      <article id="v107" class="rn-entry">
+        <div class="rn-meta">
+          <h2 class="rn-version">v1.0.7</h2>
+          <div class="rn-date">Month YYYY</div>
+        </div>
+        <p class="rn-summary">One-sentence summary.</p>
+        <div class="rn-grid">
+          <section class="rn-block">
+            <h3>Area</h3>
+            <ul>
+              <li>Bullet</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+      -->
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> MealCost</span>
+    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a href="index.html#pricing">Free vs Unlock</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="release-notes.html">Release Notes</a>
+      <a href="support.html">Support</a>
+      <a href="support.html#privacy">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
