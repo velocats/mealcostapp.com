@@ -46,9 +46,77 @@
       </header>
 
       <div class="rn-index">
+        <a class="rn-jump" href="#v107">v1.0.7</a>
         <a class="rn-jump" href="#v106">v1.0.6</a>
       </div>
 
+      <!-- v1.0.7 -->
+      <article id="v107" class="rn-entry">
+        <div class="rn-meta">
+          <h2 class="rn-version">v1.0.7</h2>
+          <div class="rn-date">February 2026</div>
+        </div>
+
+        <p class="rn-summary">
+          Clearer insights, simpler dashboards, and fixes to how meal costs and trends are calculated and displayed.
+        </p>
+
+        <div class="rn-grid">
+          <section class="rn-block">
+            <h3>Dashboard</h3>
+            <ul>
+              <li><strong>Home vs Dining Out</strong> is now an all-time average for clarity and consistency.</li>
+              <li>Removed confusing helper text that implied selectable time ranges where none existed.</li>
+              <li>Removed the <strong>Grocery Spend</strong> stat, which was misleading and not actionable.</li>
+              <li>Improved wording and layout so the primary cost stats are easier to understand at a glance.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Insights</h3>
+            <ul>
+              <li>Aligned Insights timeframe behavior with Dashboard charts to avoid mismatched results.</li>
+              <li>Fixed Home-Cooked vs Eating Out calculations so both categories always render correctly.</li>
+              <li>Removed unclear “rolling” language and standardized labels across insight cards.</li>
+              <li>Simplified charts by removing hidden or non-interactive timeframe assumptions.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Trends & Charts</h3>
+            <ul>
+              <li>Corrected cost-per-serving math so totals, meals, and servings stay in sync.</li>
+              <li>Improved trend point generation to avoid empty charts and sudden spikes.</li>
+              <li>Cleaner axis scaling and labeling for better readability.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Meals & Receipts</h3>
+            <ul>
+              <li>Fixed issues when editing meals created from receipts.</li>
+              <li>Improved behavior when switching ingredient sources so items are not accidentally cleared.</li>
+              <li>Ensured cost-per-meal calculations respect the number of servings.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block rn-wide">
+            <h3>Polish & Cleanup</h3>
+            <ul>
+              <li>Removed UI elements that suggested features that weren’t actually available.</li>
+              <li>Improved default views so new users immediately see meaningful data.</li>
+              <li>General layout, wording, and consistency improvements across Dashboard and Insights.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="rn-footer">
+          <a class="btn" href="support.html">Questions? Visit Support</a>
+          <a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">Get the iOS App</a>
+        </div>
+      </article>
+
+      <!-- v1.0.6 -->
       <article id="v106" class="rn-entry">
         <div class="rn-meta">
           <h2 class="rn-version">v1.0.6</h2>
@@ -65,7 +133,7 @@
             <ul>
               <li><strong>New shareable stat:</strong> “Dining out costs X× more on average” callout.</li>
               <li>Improved chart math consistency so “Home vs Dining Out” matches dashboard totals.</li>
-              <li>Timeframes now behave consistently across free vs paid (free uses a rolling 30 days; paid can use multiple ranges).</li>
+              <li>Timeframes now behave consistently across free vs paid.</li>
             </ul>
           </section>
 
@@ -74,59 +142,19 @@
             <ul>
               <li>Filter controls tightened up to avoid big, interrupting selection screens.</li>
               <li>Home vs Eating Out calculations corrected so dining-out meals reliably appear.</li>
-              <li>Timeframe labels standardized back to the simple Day / Week / Month / Year style.</li>
-            </ul>
-          </section>
-
-          <section class="rn-block">
-            <h3>Meals</h3>
-            <ul>
-              <li>Streamlined “Make a Meal” flow with less UI jumping and fewer taps to get to “Add Items”.</li>
-              <li>Tighter ingredient list layout so more items fit on screen at once.</li>
-            </ul>
-          </section>
-
-          <section class="rn-block">
-            <h3>Receipts</h3>
-            <ul>
-              <li>Streamlined receipt add/edit flow to reduce friction when adding grocery items.</li>
-              <li>Sample receipts and items updated so lists and charts populate immediately.</li>
+              <li>Timeframe labels standardized to Day / Week / Month / Year.</li>
             </ul>
           </section>
 
           <section class="rn-block rn-wide">
             <h3>Sample data + chart quality</h3>
             <ul>
-              <li>Sample history expanded to span multiple years so Year charts look meaningful.</li>
-              <li>More variation between home-cooked vs dining out sample data to make trends visible.</li>
-              <li>General fixes for empty charts, missing series, and outlier spikes.</li>
-            </ul>
-          </section>
-        </div>
-
-        <div class="rn-footer">
-          <a class="btn" href="support.html">Questions? Visit Support</a>
-          <a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">Get the iOS App</a>
-        </div>
-      </article>
-
-      <!-- Template for future versions:
-      <article id="v107" class="rn-entry">
-        <div class="rn-meta">
-          <h2 class="rn-version">v1.0.7</h2>
-          <div class="rn-date">Month YYYY</div>
-        </div>
-        <p class="rn-summary">One-sentence summary.</p>
-        <div class="rn-grid">
-          <section class="rn-block">
-            <h3>Area</h3>
-            <ul>
-              <li>Bullet</li>
+              <li>Expanded sample history so Month and Year charts feel meaningful.</li>
+              <li>Reduced empty charts and outlier spikes.</li>
             </ul>
           </section>
         </div>
       </article>
-      -->
 
     </div>
   </section>
@@ -150,3 +178,4 @@
 </script>
 </body>
 </html>
+
