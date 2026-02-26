@@ -1,90 +1,82 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>MealCost Release Notes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MealCost release notes and what’s new in each version." />
-  <link rel="canonical" href="https://www.mealcostapp.com/release-notes.html" />
-  <meta name="robots" content="index,follow" />
-  <link rel="icon" href="MealCostAppIcon.png" />
-  <link rel="apple-touch-icon" href="MealCostAppIcon.png" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MealCost Release Notes</title>
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #111;
+    margin: 0;
+    padding: 40px 20px;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+h1 {
+    margin-top: 0;
+}
+.version {
+    margin-top: 40px;
+}
+.version h2 {
+    margin-bottom: 10px;
+}
+.version p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+</style>
 </head>
-
 <body>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="index.html#top" aria-label="MealCost home">
-      <img src="MealCostAppIcon.png" alt="MealCost icon" />
-      <span>MealCost</span>
-    </a>
-  </div>
-</header>
+<div class="container">
+<h1>MealCost Release Notes</h1>
 
-<main class="page">
-  <section class="section">
-    <div class="wrap">
-      <header class="section-head">
-        <h1>Release Notes</h1>
-        <p>What’s new in MealCost. Short, scannable updates you can check before or after upgrading.</p>
-      </header>
+<div class="version">
+<h2>Version 1.1.1</h2>
+<p>This update introduces Taxes Paid tracking. You can now enter sales tax on both grocery receipts and dining out meals, and taxes are included in total meal and receipt costs.</p>
+<p>A new Taxes Paid chart has been added to the Insights tab. View tax totals by week, month, or year and toggle between All, Grocery, or Eating Out to better understand where your tax spending is coming from.</p>
+<p>Dining Out meal details now display tax separately, receipt totals correctly include tax, and sample data has been updated with realistic tax amounts for improved insights.</p>
+</div>
 
-      <article id="v111" class="rn-entry">
-        <div class="rn-meta">
-          <h2 class="rn-version">v1.1.1</h2>
-          <div class="rn-date">February 2026</div>
-        </div>
+<div class="version">
+<h2>Version 1.1.0</h2>
+<p>Improved cost per serving calculations and refined how dining out totals are displayed.</p>
+<p>Enhanced Insights charts for clearer comparisons between home cooking and eating out.</p>
+<p>Performance improvements and UI polish across the app.</p>
+</div>
 
-        <p class="rn-summary">
-          New Taxes Paid tracking and Insights chart.
-        </p>
+<div class="version">
+<h2>Version 1.0.8</h2>
+<p>Expanded sample data for more realistic long term trend analysis.</p>
+<p>Improved receipt editing workflow and item entry suggestions.</p>
+</div>
 
-        <div class="rn-grid">
+<div class="version">
+<h2>Version 1.0.6</h2>
+<p>Improved grocery and dining out breakdown logic for more accurate comparisons.</p>
+<p>General bug fixes and stability improvements.</p>
+</div>
 
-          <section class="rn-block">
-            <h3>Taxes Paid Tracking</h3>
-            <ul>
-              <li>You can now enter Sales Tax on grocery receipts.</li>
-              <li>You can now enter Sales Tax on dining out meals.</li>
-              <li>Taxes are included in total meal cost calculations.</li>
-            </ul>
-          </section>
+<div class="version">
+<h2>Version 1.0.4</h2>
+<p>Refined onboarding flow and clarified cost per serving insights.</p>
+<p>Minor UI improvements and performance updates.</p>
+</div>
 
-          <section class="rn-block">
-            <h3>New Taxes Paid Chart</h3>
-            <ul>
-              <li>Added a dedicated Taxes Paid section in Insights.</li>
-              <li>View tax totals by Week, Month, or Year.</li>
-              <li>Toggle between All, Grocery, or Eating Out.</li>
-              <li>All mode displays stacked bars to show category breakdown.</li>
-              <li>Summary values update dynamically based on selected mode.</li>
-            </ul>
-          </section>
+<div class="version">
+<h2>Version 1.0.1</h2>
+<p>Initial public release of MealCost with receipt tracking, meal tracking, and insights dashboard.</p>
+</div>
 
-          <section class="rn-block rn-wide">
-            <h3>Sample Data Improvements</h3>
-            <ul>
-              <li>Sample receipts and meals now include realistic Sales Tax values.</li>
-              <li>Standardized sample tax rate for consistency across charts.</li>
-            </ul>
-          </section>
-
-        </div>
-      </article>
-
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span>© <span id="year"></span> MealCost</span>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+</div>
 </body>
 </html>
