@@ -1,82 +1,385 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MealCost Release Notes</title>
-<style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #111;
-    margin: 0;
-    padding: 40px 20px;
-}
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-h1 {
-    margin-top: 0;
-}
-.version {
-    margin-top: 40px;
-}
-.version h2 {
-    margin-bottom: 10px;
-}
-.version p {
-    line-height: 1.6;
-    margin: 8px 0;
-}
-</style>
+  <meta charset="utf-8" />
+  <title>MealCost Release Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MealCost release notes and what’s new in each version." />
+  <link rel="canonical" href="https://www.mealcostapp.com/release-notes.html" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="icon" href="MealCostAppIcon.png" />
+  <link rel="apple-touch-icon" href="MealCostAppIcon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<div class="container">
-<h1>MealCost Release Notes</h1>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html#top" aria-label="MealCost home">
+      <img src="MealCostAppIcon.png" alt="MealCost icon" />
+      <span>MealCost</span>
+    </a>
 
-<div class="version">
-<h2>Version 1.1.1</h2>
-<p>This update introduces Taxes Paid tracking. You can now enter sales tax on both grocery receipts and dining out meals, and taxes are included in total meal and receipt costs.</p>
-<p>A new Taxes Paid chart has been added to the Insights tab. View tax totals by week, month, or year and toggle between All, Grocery, or Eating Out to better understand where your tax spending is coming from.</p>
-<p>Dining Out meal details now display tax separately, receipt totals correctly include tax, and sample data has been updated with realistic tax amounts for improved insights.</p>
-</div>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#features">Why MealCost</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#pricing">Free vs Unlock</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="release-notes.html" aria-current="page">Release Notes</a>
+      <a href="support.html">Support</a>
+      <a href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777"
+         class="btn primary"
+         target="_blank" rel="noopener">
+        Get the iOS App
+      </a>
+    </nav>
+  </div>
+</header>
 
-<div class="version">
-<h2>Version 1.1.0</h2>
-<p>Improved cost per serving calculations and refined how dining out totals are displayed.</p>
-<p>Enhanced Insights charts for clearer comparisons between home cooking and eating out.</p>
-<p>Performance improvements and UI polish across the app.</p>
-</div>
+<main class="page">
+  <section class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h1>Release Notes</h1>
+        <p>What’s new in MealCost. Short, scannable updates you can check before (or after) an upgrade.</p>
+      </header>
 
-<div class="version">
-<h2>Version 1.0.8</h2>
-<p>Expanded sample data for more realistic long term trend analysis.</p>
-<p>Improved receipt editing workflow and item entry suggestions.</p>
-</div>
+      <div class="rn-index">
+	        <a class="rn-jump" href="#v111">v1.1.1</a>
+<a class="rn-jump" href="#v110">v1.1.0</a>
+        <a class="rn-jump" href="#v109">v1.0.9</a>
+        <a class="rn-jump" href="#v108">v1.0.8</a>
+        <a class="rn-jump" href="#v107">v1.0.7</a>
+        <a class="rn-jump" href="#v106">v1.0.6</a>
+      </div>
 
-<div class="version">
-<h2>Version 1.0.6</h2>
-<p>Improved grocery and dining out breakdown logic for more accurate comparisons.</p>
-<p>General bug fixes and stability improvements.</p>
-</div>
 
-<div class="version">
-<h2>Version 1.0.4</h2>
-<p>Refined onboarding flow and clarified cost per serving insights.</p>
-<p>Minor UI improvements and performance updates.</p>
-</div>
 
-<div class="version">
-<h2>Version 1.0.1</h2>
-<p>Initial public release of MealCost with receipt tracking, meal tracking, and insights dashboard.</p>
-</div>
+<!-- v1.1.1 -->
+<article id="v111" class="rn-entry">
+  <div class="rn-meta">
+    <h2 class="rn-version">v1.1.1</h2>
+    <div class="rn-date">February 2026</div>
+  </div>
 
-</div>
+  <p class="rn-summary">
+    See the real cost of food spending with new Taxes Paid tracking and a brand new Insights chart.
+  </p>
+
+  <div class="rn-grid">
+
+    <section class="rn-block">
+      <h3>New: Taxes Paid Tracking</h3>
+      <ul>
+        <li>Log <strong>Sales Tax</strong> on grocery receipts and dining out meals.</li>
+        <li>Track taxes over time in a dedicated <strong>Taxes Paid</strong> chart in Insights.</li>
+        <li>Switch between <strong>All</strong>, <strong>Grocery</strong>, and <strong>Eating Out</strong> to see where taxes add up.</li>
+      </ul>
+    </section>
+
+    <section class="rn-block">
+      <h3>Clearer Insights</h3>
+      <ul>
+        <li><strong>All</strong> mode uses stacked bars so grocery and dining out taxes are easy to compare.</li>
+        <li>Summary totals update based on the selected view so the number always matches what you are looking at.</li>
+      </ul>
+    </section>
+
+    <section class="rn-block">
+      <h3>More Accurate Totals</h3>
+      <ul>
+        <li>Receipt totals now correctly include Sales Tax.</li>
+        <li>Dining Out meal details now show Sales Tax and compute Subtotal correctly.</li>
+        <li>Tip and Sales Tax rows stay out of the way when they are zero.</li>
+      </ul>
+    </section>
+
+    <section class="rn-block rn-wide">
+      <h3>Faster Editing + Better Sample Data</h3>
+      <ul>
+        <li>Edit receipt items inline without extra popups.</li>
+        <li>Sales Tax entry is tighter and easier to spot while editing receipts.</li>
+        <li>Sample receipts and meals now include realistic tax amounts for better charts.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="rn-footer">
+    <a class="btn" href="support.html">Questions? Visit Support</a>
+    <a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">Get the iOS App</a>
+  </div>
+</article>
+
+<!-- v1.1.0 -->
+<article id="v110" class="rn-entry">
+  <div class="rn-meta">
+    <h2 class="rn-version">v1.1.0</h2>
+    <div class="rn-date">February 2026</div>
+  </div>
+
+  <p class="rn-summary">
+    New Daily Meal Cost total chart, and improved free-tier behavior.
+  </p>
+
+  <div class="rn-grid">
+
+    <section class="rn-block">
+      <h3>Interactive Charts</h3>
+      <ul>
+        <li>New Daily Meal Cost Total Chart - 30 days for free tier.</li>
+        <li>Unlimited chart history with Unlock version.</li>
+        <li>Tap or drag across charts to reveal the exact cost for that day.</li>
+        <li>Added subtle visual indicators while inspecting data points.</li>
+        <li>Works in both Free and Unlock versions.</li>
+      </ul>
+    </section>
+
+    <section class="rn-block">
+      <h3>Free Version Improvements</h3>
+      <ul>
+        <li>Free tier now properly limits history to <strong>30 days</strong>.</li>
+        <li>Removed timeframe toggles where additional history isn’t available.</li>
+        <li>Prevents confusion between Free and Unlock features.</li>
+      </ul>
+    </section>
+
+    <section class="rn-block rn-wide">
+      <h3>Polish</h3>
+      <ul>
+        <li>Minor UI refinements across Dashboard cards.</li>
+        <li>Improved state handling when switching between Free and Unlock.</li>
+        <li>General stability improvements.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="rn-footer">
+    <a class="btn" href="support.html">Questions? Visit Support</a>
+    <a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">Get the iOS App</a>
+  </div>
+</article>
+
+      <!-- v1.0.9 -->
+      <article id="v109" class="rn-entry">
+        <div class="rn-meta">
+          <h2 class="rn-version">v1.0.9</h2>
+          <div class="rn-date">February 2026</div>
+        </div>
+
+        <p class="rn-summary">
+          More consistent monthly stats, clearer cost-per-serving insights, and a refreshed Home vs Eating Out card.
+        </p>
+
+        <div class="rn-grid">
+          <section class="rn-block">
+            <h3>Cost per Serving Consistency</h3>
+            <ul>
+              <li>Standardized <strong>Cost per Serving</strong> across Dashboard, Budget, and Insights so monthly values match.</li>
+              <li>Monthly calculations now consistently use the <strong>calendar month</strong> (month-to-date), not a rolling window.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Insights: Home vs Eating Out</h3>
+            <ul>
+              <li>Improved the top comparison card layout for faster scanning.</li>
+              <li>Added a clearer highlight showing how much more <strong>Eating Out</strong> costs per serving on average.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Charts</h3>
+            <ul>
+              <li>Trend charts now reflect the same cost-per-serving logic used in the summary stats.</li>
+              <li>Visual refinements to improve readability and reduce “jumpiness” between points.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block rn-wide">
+            <h3>Polish</h3>
+            <ul>
+              <li>Improved hierarchy and emphasis in key insight callouts so the important numbers stand out.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="rn-footer">
+          <a class="btn" href="support.html">Questions? Visit Support</a>
+          <a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">Get the iOS App</a>
+        </div>
+      </article>
+
+      <!-- v1.0.8 -->
+      <article id="v108" class="rn-entry">
+        <div class="rn-meta">
+          <h2 class="rn-version">v1.0.8</h2>
+          <div class="rn-date">February 2026</div>
+        </div>
+
+        <p class="rn-summary">
+          Fixes an issue where Cost per Serving could display an outdated value after editing meals, plus a one-time repair to correct existing meals.
+        </p>
+
+        <div class="rn-grid">
+          <section class="rn-block">
+            <h3>Cost per Serving</h3>
+            <ul>
+              <li>Fixed a bug where <strong>Cost per Serving</strong> could remain “stuck” on a previous value after ingredients or servings were edited.</li>
+              <li>Cost per Serving now always matches <strong>Total Cost ÷ Servings</strong> consistently across the app.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Data Repair</h3>
+            <ul>
+              <li>Added a <strong>one-time repair pass</strong> that corrects stored meal cost values from earlier versions.</li>
+              <li>This runs once (silently) after upgrading, then won’t run again.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block rn-wide">
+            <h3>Reliability</h3>
+            <ul>
+              <li>Improved consistency of saved meal edits so totals and per-serving values stay in sync after closing Meal Details.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="rn-footer">
+          <a class="btn" href="support.html">Questions? Visit Support</a>
+          <a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">Get the iOS App</a>
+        </div>
+      </article>
+
+      <!-- v1.0.7 -->
+      <article id="v107" class="rn-entry">
+        <div class="rn-meta">
+          <h2 class="rn-version">v1.0.7</h2>
+          <div class="rn-date">February 2026</div>
+        </div>
+
+        <p class="rn-summary">
+          Clearer insights, simpler dashboards, and fixes to how meal costs and trends are calculated and displayed.
+        </p>
+
+        <div class="rn-grid">
+          <section class="rn-block">
+            <h3>Dashboard</h3>
+            <ul>
+              <li><strong>Home vs Dining Out</strong> is now an all-time average for clarity and consistency.</li>
+              <li>Removed confusing helper text that implied selectable time ranges where none existed.</li>
+              <li>Removed the <strong>Grocery Spend</strong> stat, which was misleading and not actionable.</li>
+              <li>Improved wording and layout so the primary cost stats are easier to understand at a glance.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Insights</h3>
+            <ul>
+              <li>Aligned Insights timeframe behavior with Dashboard charts to avoid mismatched results.</li>
+              <li>Fixed Home-Cooked vs Eating Out calculations so both categories always render correctly.</li>
+              <li>Removed unclear “rolling” language and standardized labels across insight cards.</li>
+              <li>Simplified charts by removing hidden or non-interactive timeframe assumptions.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Trends & Charts</h3>
+            <ul>
+              <li>Corrected cost-per-serving math so totals, meals, and servings stay in sync.</li>
+              <li>Improved trend point generation to avoid empty charts and sudden spikes.</li>
+              <li>Cleaner axis scaling and labeling for better readability.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Meals & Receipts</h3>
+            <ul>
+              <li>Fixed issues when editing meals created from receipts.</li>
+              <li>Improved behavior when switching ingredient sources so items are not accidentally cleared.</li>
+              <li>Ensured cost-per-meal calculations respect the number of servings.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block rn-wide">
+            <h3>Polish & Cleanup</h3>
+            <ul>
+              <li>Removed UI elements that suggested features that weren’t actually available.</li>
+              <li>Improved default views so new users immediately see meaningful data.</li>
+              <li>General layout, wording, and consistency improvements across Dashboard and Insights.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="rn-footer">
+          <a class="btn" href="support.html">Questions? Visit Support</a>
+          <a class="btn primary" href="https://apps.apple.com/us/app/mealcost-food-costs/id6757403777" target="_blank" rel="noopener">Get the iOS App</a>
+        </div>
+      </article>
+
+      <!-- v1.0.6 -->
+      <article id="v106" class="rn-entry">
+        <div class="rn-meta">
+          <h2 class="rn-version">v1.0.6</h2>
+          <div class="rn-date">February 2026</div>
+        </div>
+
+        <p class="rn-summary">
+          Cleaner flows, clearer charts, and better sample data so the dashboards and insights look great right away.
+        </p>
+
+        <div class="rn-grid">
+          <section class="rn-block">
+            <h3>Dashboard</h3>
+            <ul>
+              <li><strong>New shareable stat:</strong> “Dining out costs X× more on average” callout.</li>
+              <li>Improved chart math consistency so “Home vs Dining Out” matches dashboard totals.</li>
+              <li>Timeframes now behave consistently across free vs paid.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block">
+            <h3>Insights</h3>
+            <ul>
+              <li>Filter controls tightened up to avoid big, interrupting selection screens.</li>
+              <li>Home vs Eating Out calculations corrected so dining-out meals reliably appear.</li>
+              <li>Timeframe labels standardized to Day / Week / Month / Year.</li>
+            </ul>
+          </section>
+
+          <section class="rn-block rn-wide">
+            <h3>Sample data + chart quality</h3>
+            <ul>
+              <li>Expanded sample history so Month and Year charts feel meaningful.</li>
+              <li>Reduced empty charts and outlier spikes.</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> MealCost</span>
+    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a href="index.html#pricing">Free vs Unlock</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="release-notes.html">Release Notes</a>
+      <a href="support.html">Support</a>
+      <a href="support.html#privacy">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
