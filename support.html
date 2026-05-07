@@ -85,12 +85,12 @@
 
         <article class="card">
           <h3>Do you upload my receipt images?</h3>
-          <p>No — if you scan or import receipts, images are processed on-device and are not shared or uploaded.</p>
+          <p>Only if you use the Receipt Import feature. When you import a receipt, the image is sent to a secure proxy server, then to Mindee (OCR) and Anthropic (Claude) for processing. Images are used only to extract item names and prices and are not stored or used for any other purpose.</p>
         </article>
 
         <article class="card">
           <h3>Do you share or sell data?</h3>
-          <p>No — MealCost does not sell, share, or disclose user data to third parties.</p>
+          <p>No — MealCost does not sell, share, or disclose user data to third parties beyond what is required to process receipt imports (see above).</p>
         </article>
 
         <article class="card">
@@ -105,7 +105,7 @@
     <div class="wrap">
       <header class="section-head">
         <h2>Privacy Policy</h2>
-        <p>Effective Date: January 2026</p>
+        <p>Effective Date: May 2026</p>
       </header>
 
       <div class="about">
@@ -128,7 +128,25 @@
         <h3 style="margin:18px 0 8px;">Camera and Photos</h3>
         <p>
           MealCost may access the camera or photo library to scan or import receipts.
-          Images are processed on-device and are not shared or uploaded.
+          If you use the Receipt Import feature, receipt images are transmitted to a
+          Cloudflare-hosted proxy server for processing. That server sends the image to
+          Mindee for optical character recognition (OCR) and to Anthropic (Claude) for
+          item name expansion and food classification. Images are used only to extract
+          receipt data and are not stored beyond the duration of the request.
+        </p>
+
+        <h3 style="margin:18px 0 8px;">Third-Party Services</h3>
+        <p>
+          Receipt Import uses the following third-party services:
+        </p>
+        <ul style="margin:8px 0 0 18px; line-height:1.7;">
+          <li><strong>Cloudflare</strong> — secure proxy server infrastructure</li>
+          <li><strong>Mindee</strong> — optical character recognition (OCR) for receipt parsing</li>
+          <li><strong>Anthropic (Claude)</strong> — AI-assisted item name expansion and classification</li>
+        </ul>
+        <p style="margin:10px 0 0;">
+          These services receive only the receipt image and return structured data (item names and prices).
+          No personal information is sent. Each service's own privacy policy applies to their processing.
         </p>
 
         <h3 style="margin:18px 0 8px;">Tracking and Advertising</h3>
@@ -138,7 +156,8 @@
 
         <h3 style="margin:18px 0 8px;">Data Sharing</h3>
         <p>
-          MealCost does not sell, share, or disclose user data to third parties.
+          MealCost does not sell, share, or disclose user data to third parties,
+          except as described above for receipt image processing.
         </p>
 
         <h3 style="margin:18px 0 8px;">Contact</h3>
