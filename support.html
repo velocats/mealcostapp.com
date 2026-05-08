@@ -37,7 +37,7 @@
     <div class="wrap">
       <header class="section-head">
         <h1>Support</h1>
-        <p>Questions, feature requests, or bug reports — email us and we’ll help.</p>
+        <p>Questions, feature requests, or bug reports — email us and we'll help.</p>
       </header>
 
       <div class="download-box" style="margin-top:16px;">
@@ -47,7 +47,7 @@
             Email: <a href="mailto:mealcostapp@gmail.com">mealcostapp@gmail.com</a>
           </p>
           <p style="margin:10px 0 0; color: var(--muted);">
-            If you’re reporting a bug, include your device model and iOS version.
+            If you're reporting a bug, include your device model and iOS version.
           </p>
         </div>
 
@@ -75,7 +75,7 @@
 
         <article class="card">
           <h3>Where is my data stored?</h3>
-          <p>Your meal, item, and cost data is stored locally on your device. If you enable iCloud sync, it’s stored in your personal iCloud account.</p>
+          <p>Your meal, item, and cost data is stored locally on your device. If you enable iCloud sync, it's stored in your personal iCloud account.</p>
         </article>
 
         <article class="card">
@@ -95,7 +95,7 @@
 
         <article class="card">
           <h3>How do I request a feature?</h3>
-          <p>Email what you’re trying to do and what you expected to happen. Short is fine.</p>
+          <p>Email what you're trying to do and what you expected to happen. Short is fine.</p>
         </article>
       </div>
     </div>
@@ -117,12 +117,15 @@
         <p>
           MealCost stores meal, item, and cost data locally on your device. If iCloud sync is enabled,
           data is stored securely in your personal iCloud account and is not accessible to the developer.
+          Extracted item names and prices from receipt imports are stored locally on your device and,
+          if iCloud sync is enabled, in your personal iCloud account.
         </p>
 
         <h3 style="margin:18px 0 8px;">Data Collection</h3>
         <p>
           MealCost does not collect personal information, does not require an account,
-          and does not transmit user data to external servers.
+          and does not transmit user data to external servers, except as described below
+          for receipt image processing and in-app purchases.
         </p>
 
         <h3 style="margin:18px 0 8px;">Camera and Photos</h3>
@@ -131,8 +134,9 @@
           If you use the Receipt Import feature, receipt images are transmitted to a
           Cloudflare-hosted proxy server for processing. That server sends the image to
           Mindee for optical character recognition (OCR) and to Anthropic (Claude) for
-          item name expansion and food classification. Images are used only to extract
-          receipt data and are not stored beyond the duration of the request.
+          item name expansion and food classification. Images are transmitted solely to
+          extract receipt data. Per their respective privacy policies, these services do
+          not retain images beyond request processing.
         </p>
 
         <h3 style="margin:18px 0 8px;">Third-Party Services</h3>
@@ -143,6 +147,7 @@
           <li><strong>Cloudflare</strong> — secure proxy server infrastructure</li>
           <li><strong>Mindee</strong> — optical character recognition (OCR) for receipt parsing</li>
           <li><strong>Anthropic (Claude)</strong> — AI-assisted item name expansion and classification</li>
+          <li><strong>Apple (StoreKit)</strong> — processes in-app purchases for Receipt Import credits. Apple's privacy policy applies to payment processing.</li>
         </ul>
         <p style="margin:10px 0 0;">
           These services receive only the receipt image and return structured data (item names and prices).
@@ -157,7 +162,7 @@
         <h3 style="margin:18px 0 8px;">Data Sharing</h3>
         <p>
           MealCost does not sell, share, or disclose user data to third parties,
-          except as described above for receipt image processing.
+          except as described above for receipt image processing and in-app purchase handling.
         </p>
 
         <h3 style="margin:18px 0 8px;">Contact</h3>
